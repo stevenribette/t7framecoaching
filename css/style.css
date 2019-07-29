@@ -1,0 +1,26 @@
+.menu{
+    margin-top: 0%;
+}
+p{
+    font-size: 150%;
+    font-family: tekkenfont;
+    color:white;
+}
+@font-face {
+    font-family: tekkenfont;
+    src: url(../font/tekken_font.ttf);
+}
+body{
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+.menubody{
+    background-image: url(../img/background/menu.jpg);
+}
+.gamebody{
+    background-image: url(../img/background/game.jpg);
+    background-size: cover;
+}
+.btnmenu{
+    background-color: rgba(0, 0, 0, 0.3);
+}

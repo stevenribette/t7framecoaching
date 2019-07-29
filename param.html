@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/script.js"></script>
+
+        <script src="cordova.js"></script>
+        <script src="cordova_plugins.js"></script>
+
+        <script src="bootstrap/js/jquery.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>FRT</title>
+        <script type="text/javascript" charset="utf-8">
+        function init() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var storage = window.localStorage;
+            soundstatus = storage.getItem("sound"); 
+            if(soundstatus==1){
+                $("#checkBoxSound").attr('checked',"true");
+            }
+            vibrationstatus = storage.getItem("vibration"); 
+            if(vibrationstatus==1){
+                $("#checkBoxVibration").attr('checked',"true");
+            }
+        }
+        function onDeviceReady() {
+            document.getElementById('exitApp').addEventListener('click', function() {
+                if (navigator.app) {
+                    navigator.app.exitApp();
+                }
+                else if (navigator.device) {
+                    navigator.device.exitApp();
+                }
+            });
+        }
+        function delData(){
+            var temp = "You are going to erase all of your data";
+            if (confirm(temp)){
+                var temp = "Are you sure ?";
+                if (confirm(temp))
+                {
+                    var storage = window.localStorage;
+                    storage.removeItem("coin");
+                    storage.removeItem("sound");
+                    storage.removeItem("vibration");
+                    storage.removeItem("totalfight");
+                    storage.removeItem("totalhit");
+                    storage.removeItem("dailycoin");
+                    storage.removeItem("achievement");
+                    document.location.href="index.html";
+                }
+            }
+        }
+        function MuteSound(value){
+            var storage = window.localStorage;
+            if($("#"+value+"").attr('checked')){
+                storage.setItem("frtsound",0);
+                $("#"+value+"").removeAttr('checked');
+            }
+            else{
+                storage.setItem("frtsound",1);
+                $("#"+value+"").attr('checked',"true");
+            }
+        }
+        function MuteVibration(value){
+            var storage = window.localStorage;
+            if($("#"+value+"").attr('checked')){
+                storage.setItem("frtvibration",0);
+                $("#"+value+"").removeAttr('checked');
+            }
+            else{
+                storage.setItem("frtvibration",1);
+                $("#"+value+"").attr('checked',"true");
+            }
+        }
+    </script>
+    </head>
+
+    <body class="menubody" onload="init();">
+    <div class="app">
+        <div class="container">
+            <button class="btn btn-block btnmenu btnParam" onclick="delData()"><p>R E S ET</p></button>
+            <span class="btn btn-block btnmenu btnParam"><input id="checkBoxSound" name="sound" type="checkbox" onclick="MuteSound(this.id)"/><p class="display-inline" style="font-size:100%;">S O U N D</p></span>
+            <span class="btn btn-block btnmenu btnParam"><input id="checkBoxVibration" name="vibration" type="checkbox" onclick="MuteVibration(this.id)"/><p class="display-inline" style="font-size:100%;">V I B R A T I O N</p></span>
+        </div>
+    </div>
+    </body>
+</html>
