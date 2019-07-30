@@ -1,4 +1,4 @@
-paul='[
+var paul=[
     {
         "Command": "in rage 1+2",
         "Hit level": "m",
@@ -1509,4 +1509,4 @@ paul='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

@@ -1,4 +1,4 @@
-lee='[
+var lee=[
     {
         "Command": "in rage d+1+2 in rage HMS d+1+2",
         "Hit level": "m",
@@ -2269,4 +2269,4 @@ lee='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

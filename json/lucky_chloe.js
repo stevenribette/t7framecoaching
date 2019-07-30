@@ -1,4 +1,4 @@
-lucky_chloe='[
+var lucky_chloe=[
     {
         "Command": "in rage 3+4",
         "Hit level": "l (TC)",
@@ -1509,4 +1509,4 @@ lucky_chloe='[
         "Counter hit frame": "-2",
         "Notes": "-"
     }
-]';
+];

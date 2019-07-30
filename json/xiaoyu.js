@@ -1,4 +1,4 @@
-xiaoyu='[
+var xiaoyu=[
     {
         "Command": "in rage b+1+2 or WS+b+1+2 or AOP b+1+2",
         "Hit level": "m",
@@ -2449,4 +2449,4 @@ xiaoyu='[
         "Counter hit frame": "+2s",
         "Notes": "-"
     }
-]';
+];

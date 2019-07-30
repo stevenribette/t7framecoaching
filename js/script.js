@@ -1,6 +1,7 @@
 var deviceType = (navigator.userAgent.match(/iPad/i))  == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i))  == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
 var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
 var storage = window.localStorage;
+var characters = ['akuma','alisa','anna','armor_king','asuka','bob','bryan','claudio','devil_jin','dragunov','eddy','eliza','feng','geese','gigas','heihachi','hwoarang','jack7','jin','josie','julia','katarina','kazumi','kazuya','king','kuma','lars','law','lee','lei','leo','lili','lucky_chloe','marduk','master_raven','miguel','negan','nina','noctis','panda','paul','shaheen','steve','xiaoyu','yoshimitsu'];
 function toggleVisibility(elmt)
 {
    if(typeof elmt == "string")
@@ -42,9 +43,6 @@ function init() {
     }else{
 
     }
-}
-function onDeviceReady() {
-
 }
 function date(){
    var tab_jour=new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");

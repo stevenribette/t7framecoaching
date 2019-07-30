@@ -1,4 +1,4 @@
-devil_jin='[
+var devil_jin=[
     {
         "Command": "in rage b+1+2",
         "Hit level": "m (TJ)",
@@ -1639,4 +1639,4 @@ devil_jin='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

@@ -1,4 +1,4 @@
-steve='[
+var steve=[
     {
         "Command": "in rage 1+2 or WS+1+2",
         "Hit level": "h",
@@ -2499,4 +2499,4 @@ steve='[
         "Counter hit frame": "-",
         "Notes": "-"
     }
-]';
+];

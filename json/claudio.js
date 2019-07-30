@@ -1,4 +1,4 @@
-claudio='[
+var claudio=[
     {
         "Command": "in rage d/f+1+2",
         "Hit level": "m",
@@ -1329,4 +1329,4 @@ claudio='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

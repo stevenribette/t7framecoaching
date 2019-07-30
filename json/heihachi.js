@@ -1,4 +1,4 @@
-heihachi='[
+var heihachi=[
     {
         "Command": "in rage d+1+2",
         "Hit level": "m",
@@ -1469,4 +1469,4 @@ heihachi='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

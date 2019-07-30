@@ -1,4 +1,4 @@
-geese='[
+var geese=[
     {
         "Command": "in rage d/b+1+2 or FC+d/b+1+2",
         "Hit level": "h!",
@@ -1359,4 +1359,4 @@ geese='[
         "Counter hit frame": "KND",
         "Notes": "-"
     }
-]';
+];

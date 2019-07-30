@@ -1,4 +1,4 @@
-master_raven='[
+var master_raven=[
     {
         "Command": "in rage d/b+3+4",
         "Hit level": "m (TJ)",
@@ -2249,4 +2249,4 @@ master_raven='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

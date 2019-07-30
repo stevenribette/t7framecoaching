@@ -1,4 +1,4 @@
-jin='[
+var jin=[
     {
         "Command": "in rage b+1+2",
         "Hit level": "h",
@@ -1649,4 +1649,4 @@ jin='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

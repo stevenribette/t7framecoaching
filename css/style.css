@@ -2,25 +2,45 @@
     margin-top: 0%;
 }
 p{
-    font-size: 150%;
+    font-size: 180%;
     font-family: tekkenfont;
     color:white;
 }
 @font-face {
     font-family: tekkenfont;
-    src: url(../font/tekken_font.ttf);
+    src: url(../font/tarrgetacadital.ttf);
 }
 body{
     background-repeat: no-repeat;
     background-attachment:fixed;
+    background-size: cover;
 }
 .menubody{
     background-image: url(../img/background/menu.jpg);
 }
 .gamebody{
     background-image: url(../img/background/game.jpg);
-    background-size: cover;
 }
 .btnmenu{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.btnParam{
+    margin-top:10%;
+    width: 100%;
+    text-align: center;
+    border-radius:5px;
+}
+.display-inline{
+    display: inline;
+}
+#checkBoxSound{
+    margin-right:15px;
+}
+.persoList{
+    width: 49%;
+    min-height:180px;
+    margin-top:2px;
+    margin-right:2px;
+    display:inline-block;
+    background-color:white;
 }

@@ -1,4 +1,4 @@
-law='[
+var law=[
     {
         "Command": "in rage 1+2",
         "Hit level": "m",
@@ -2569,4 +2569,4 @@ law='[
         "Counter hit frame": "Launch (JG?)",
         "Notes": "-"
     }
-]';
+];

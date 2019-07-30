@@ -1,4 +1,4 @@
-armor_king='[
+var armor_king=[
     {
         "Command": "In rage b+3+4",
         "Hit level": "m (throw)",
@@ -1219,4 +1219,4 @@ armor_king='[
         "Counter hit frame": "+7g",
         "Notes": "-"
     }
-]';
+];

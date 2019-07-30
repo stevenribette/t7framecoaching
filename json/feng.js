@@ -1,4 +1,4 @@
-feng='[
+var feng=[
     {
         "Command": "in rage d+1+2",
         "Hit level": "m",
@@ -2059,4 +2059,4 @@ feng='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

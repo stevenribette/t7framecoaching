@@ -1,4 +1,4 @@
-kazuya='[
+var kazuya=[
     {
         "Command": "in rage d/f+1+2",
         "Hit level": "m",
@@ -1549,4 +1549,4 @@ kazuya='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

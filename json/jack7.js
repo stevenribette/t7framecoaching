@@ -1,4 +1,4 @@
-jack7='[
+var jack7=[
     {
         "Command": "in rage b+1+2",
         "Hit level": "m",
@@ -2049,4 +2049,4 @@ jack7='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

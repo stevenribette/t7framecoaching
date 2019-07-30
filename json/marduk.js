@@ -1,4 +1,4 @@
-marduk='[
+var marduk=[
     {
         "Command": "In rage b+1+2",
         "Hit level": "m (throw)",
@@ -1299,4 +1299,4 @@ marduk='[
         "Counter hit frame": "KND",
         "Notes": "-"
     }
-]';
+];

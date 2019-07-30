@@ -1,4 +1,4 @@
-negan='[
+var negan=[
     {
         "Command": "In rage d+1+2",
         "Hit level": "m (throw)",
@@ -1049,4 +1049,4 @@ negan='[
         "Counter hit frame": "JG",
         "Notes": "-"
     }
-]';
+];

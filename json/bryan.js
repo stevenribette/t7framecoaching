@@ -1,4 +1,4 @@
-bryan='[
+var bryan=[
     {
         "Command": "in rage d/f+1+2 or FC+d/f+1+2",
         "Hit level": "m",
@@ -2029,4 +2029,4 @@ bryan='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

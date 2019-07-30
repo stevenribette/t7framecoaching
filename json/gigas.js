@@ -1,4 +1,4 @@
-gigas='[
+var gigas=[
     {
         "Command": "in rage 1+2",
         "Hit level": "m (TJ)",
@@ -1439,4 +1439,4 @@ gigas='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

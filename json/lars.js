@@ -1,4 +1,4 @@
-lars='[
+var lars=[
     {
         "Command": "in rage 1+2",
         "Hit level": "m",
@@ -1569,4 +1569,4 @@ lars='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

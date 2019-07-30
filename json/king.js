@@ -1,4 +1,4 @@
-king='[
+var king=[
     {
         "Command": "in rage d/f+1+2",
         "Hit level": "m",
@@ -1929,4 +1929,4 @@ king='[
         "Counter hit frame": "KND",
         "Notes": "-"
     }
-]';
+];

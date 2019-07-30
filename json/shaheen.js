@@ -1,4 +1,4 @@
-shaheen='[
+var shaheen=[
     {
         "Command": "in rage 1+2",
         "Hit level": "m",
@@ -1189,4 +1189,4 @@ shaheen='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

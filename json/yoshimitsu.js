@@ -1,4 +1,4 @@
-yoshimitsu='[
+var yoshimitsu=[
     {
         "Command": "in rage b+1+2",
         "Hit level": "m",
@@ -4099,4 +4099,4 @@ yoshimitsu='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

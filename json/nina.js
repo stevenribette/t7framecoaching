@@ -1,4 +1,4 @@
-nina='[
+var nina=[
     {
         "Command": "in rage d+1+2",
         "Hit level": "m?",
@@ -2249,4 +2249,4 @@ nina='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

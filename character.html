@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <script type="text/javascript" src="js/script.js"></script>
+
+        <script src="cordova.js"></script>
+        <script src="cordova_plugins.js"></script>
+
+        <script src="bootstrap/js/jquery.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>t7framecoaching</title>
+    </head>
+
+    <body class="menubody" onload="init();">
+        <div class="app">
+            <div class="container">
+                <script>
+                    mode = $_GET('mode');
+                    for(x=0;x<characters.length;x++){
+                        character=characters[x];
+                        document.write("<a href='"+mode+".html?character="+x+"'><img style=\"display:inline\"class='img-responsive persoList' src='img/character/"+character+".png'></a>");
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

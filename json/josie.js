@@ -1,4 +1,4 @@
-josie='[
+var josie=[
     {
         "Command": "in rage d/f+1+2",
         "Hit level": "m",
@@ -1609,4 +1609,4 @@ josie='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

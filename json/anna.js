@@ -1,4 +1,4 @@
-anna='[
+var anna=[
     {
         "Command": "in rage b+1+2",
         "Hit level": "h",
@@ -2339,4 +2339,4 @@ anna='[
         "Counter hit frame": " ",
         "Notes": "-"
     }
-]';
+];

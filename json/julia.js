@@ -1,4 +1,4 @@
-julia='[
+var julia=[
     {
         "Command": "In rage d/f+1+2",
         "Hit level": "m (throw)",
@@ -1479,4 +1479,4 @@ julia='[
         "Counter hit frame": "JG",
         "Notes": "-"
     }
-]';
+];

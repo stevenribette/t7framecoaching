@@ -1,4 +1,4 @@
-bob='[
+var bob=[
     {
         "Command": "in rage d/f+1+2",
         "Hit level": "m",
@@ -2089,4 +2089,4 @@ bob='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

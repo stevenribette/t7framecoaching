@@ -1,4 +1,4 @@
-leo='[
+var leo=[
     {
         "Command": "in rage d/f+1+2",
         "Hit level": "m",
@@ -1859,4 +1859,4 @@ leo='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

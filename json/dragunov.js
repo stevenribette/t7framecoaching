@@ -1,4 +1,4 @@
-dragunov='[
+var dragunov=[
     {
         "Command": "in rage d+1+2",
         "Hit level": "m",
@@ -1759,4 +1759,4 @@ dragunov='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

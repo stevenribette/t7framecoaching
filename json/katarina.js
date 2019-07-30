@@ -1,4 +1,4 @@
-katarina ='[
+var katarina =[
     {
         "Command": "in rage 3+4",
         "Hit level": "m",
@@ -1349,4 +1349,4 @@ katarina ='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];

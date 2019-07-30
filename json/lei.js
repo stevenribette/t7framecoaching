@@ -1,4 +1,4 @@
-lei='[
+var lei=[
     {
         "Command": "In rage d/f+3+4",
         "Hit level": "m (Throw)",
@@ -3629,4 +3629,4 @@ lei='[
         "Counter hit frame": "JG",
         "Notes": "-"
     }
-]';
+];

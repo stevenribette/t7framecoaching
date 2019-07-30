@@ -1,4 +1,4 @@
-noctis='[
+var noctis=[
     {
         "Command": "in rage d+1+2",
         "Hit level": "m",
@@ -1039,4 +1039,4 @@ noctis='[
         "Counter hit frame": "-",
         "Notes": "-"
     }
-]';
+];

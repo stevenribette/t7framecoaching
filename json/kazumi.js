@@ -1,4 +1,4 @@
-kazumi='[
+var kazumi=[
     {
         "Command": "in rage d+1+2",
         "Hit level": "m",
@@ -1269,4 +1269,4 @@ kazumi='[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-]';
+];
