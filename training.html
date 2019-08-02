@@ -65,13 +65,53 @@
     </head>
 
     <body class="gamebody" onload="init();">
+        <script>
+            function training_answer(answer_id){
+                if(frame[answer_id][element]==answers[good_answer].move[element]){
+                    console.log("c'est gagner");
+                }else{
+                    console.log(""+answers[good_answer].move[ 'Command' ]+" est à "+answers[good_answer].move[ element ]+" en "+element);
+                }
+                console.log(frame[answer_id]);
+            }
+            var elements = ['Block frame','Counter hit frame', 'Damage', 'Hit frame', 'Start up frame'];
+            var frames = [akuma,alisa,anna,armor_king,asuka,bob,bryan,claudio,devil_jin,dragunov,eddy,eliza,feng,geese,gigas,heihachi,hwoarang,jack7,jin,josie,julia,katarina,kazumi,kazuya,king,kuma,lars,law,lee,lei,leo,lili,lucky_chloe,marduk,master_raven,miguel,negan,nina,noctis,panda,paul,shaheen,steve,xiaoyu,yoshimitsu];
+            var character_id = parseInt($_GET('character'));
+            var character = characters[character_id];
+            var frame = frames[character_id];
+            var max_answer = 4;
+            var answers = [];
+            for(var x=0;x<max_answer;x++){
+                var input = getRandomInt(frame.length);
+                answers.push({'id':input,'move':frame[input]});
+            }
+            var good_answer = getRandomInt(answers.length);
+            var element = elements[0];
+        </script>
         <div class="app">
             <div class="container">
-                <script>
-                    var frames = [akuma,alisa,anna,armor_king,asuka,bob,bryan,claudio,devil_jin,dragunov,eddy,eliza,feng,geese,gigas,heihachi,hwoarang,jack7,jin,josie,julia,katarina,kazumi,kazuya,king,kuma,lars,law,lee,lei,leo,lili,lucky_chloe,marduk,master_raven,miguel,negan,nina,noctis,panda,paul,shaheen,steve,xiaoyu,yoshimitsu];
-                    character = characters[parseInt($_GET('character'))];
-                    
-                </script>
+                <div class="col-sm-12">
+                    <script>
+                        document.write("<p id='character_title'>"+character+"</P>");
+                    </script>
+                </div>
+                <div id="gamescreen">
+                    <script>
+                        document.write("<img id='gif' class='img-responsive' src='http://bloper97.fr/r/t7framecoaching/api/img/"+character+"/move_"+answers[good_answer].id+".gif'/>");
+                        document.write("<div class='col-sm-12 inputLayer'>"+answers[good_answer].move[ 'Command' ]+"</div><br>");
+                        document.write("<div class='col-sm-12 inputLayer'>"+element+"</div><br>");
+                    </script>
+                </div>
+                <div id="controller" class="container">
+                    <script>
+                        for(var x=0;x<answers.length;x++){
+                            var answer = answers[x];
+                            var id = answer.id;
+                            var block_frame = answer.move[ element ];
+                            document.write("<div class='col-sm-6 btn btn-block btngame' onclick='training_answer("+id+")' id='btn_"+id+"'>"+block_frame+"</div>");
+                        }
+                    </script>
+                </div>
             </div>
         </div>
     </body>
