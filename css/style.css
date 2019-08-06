@@ -3,8 +3,10 @@
 }
 p{
     font-size: 180%;
-    font-family: tekkenfont;
     color:white;
+}
+.tekkenfont{
+    font-family: tekkenfont;
 }
 @font-face {
     font-family: tekkenfont;
@@ -23,6 +25,7 @@ body{
 }
 .btnmenu{
     background-color: rgba(0, 0, 0, 0.8);
+    font-size: 3.5vw !important;
 }
 .btnParam{
     margin-top:10%;
@@ -58,7 +61,7 @@ body{
     margin: auto;
     margin-top: 2%;
 }
-#character_title{
+.character_title{
     text-align: center;
     font-size: 200%;
 }
@@ -66,4 +69,13 @@ body{
     color: white;
     font-size: 120%;
     text-align: center;
+}
+.framedata_table{
+    overflow-x:scroll;  
+    margin-left:5em;
+}
+.headcol{
+    position:absolute;
+    width:5em;
+    left:0;
 }

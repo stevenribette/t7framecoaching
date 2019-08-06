@@ -1,0 +1,1 @@
+var frames = [akuma,alisa,anna,armor_king,asuka,bob,bryan,claudio,devil_jin,dragunov,eddy,eliza,feng,geese,gigas,heihachi,hwoarang,jack7,jin,josie,julia,katarina,kazumi,kazuya,king,kuma,lars,law,lee,lei,leo,lili,lucky_chloe,marduk,master_raven,miguel,negan,nina,noctis,panda,paul,shaheen,steve,xiaoyu,yoshimitsu];
