@@ -85,3 +85,21 @@ body{
 	height:2000px;
 	overflow-y:scroll;
 }
+.droitParagraph{
+    font-family: droitfont;
+    text-align: center;
+    font-size: 150%;
+}
+.external_link{
+    color:turquoise;
+    border-bottom:1px solid aqua;
+}
+#panneauResult {
+    position: relative;
+    color: goldenrod;
+    border-bottom: 0px solid deepskyblue;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+#containerPanneauResult{
+    position: absolute;
+}

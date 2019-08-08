@@ -67,13 +67,59 @@
 
     <body class="gamebody" onload="init();">
         <script>
+            function afficherContainer(str){
+                affichage = true;
+                $('#containerPanneauResult').removeClass('fadeOutLeft');
+                $('#panneauResult span').text(str);
+                toggleDisplay('containerPanneauResult');
+            }
+            function effacerContainer(){
+                $('#containerPanneauResult').addClass('fadeOutLeft');
+                setTimeout(function(){
+                    $('#panneauResult span').text('');
+                    toggleDisplay('containerPanneauResult');
+                    affichage = false;
+                },300);
+            }
             function training_answer(answer_id){
-                if(frame[answer_id][element]==answers[good_answer].move[element]){
-                    console.log("c'est gagner");
-                }else{
-                    console.log(""+answers[good_answer].move[ 'Command' ]+" est à "+answers[good_answer].move[ element ]+" en "+element);
+                if(affichage == true){
+                    return false;
                 }
-                console.log(frame[answer_id]);
+                if(frame[answer_id][element]==answers[good_answer].move[element]){
+                    panneau_result("c'est gagner");
+                }else{
+                    panneau_result(""+answers[good_answer].move[ 'Command' ]+" est à "+answers[good_answer].move[ element ]+" en "+element);
+                }
+            }
+            function panneau_result(str){
+                afficherContainer(str);
+                setTimeout(function () {
+                    effacerContainer();
+                    shuffle();
+                }, 3000);
+            }
+            function shuffle(){
+                answers = [];
+                for(var x=0;x<max_answer;x++){
+                    var input = getRandomInt(frame.length);
+                    answers.push({'id':input,'move':frame[input]});
+                }
+                good_answer = getRandomInt(answers.length);
+                element = elements[0];
+
+                var str='';
+                for(var x=0;x<answers.length;x++){
+                    var answer = answers[x];
+                    var id = answer.id;
+                    var block_frame = answer.move[ element ];
+                    str += "<div class='col-sm-6 btn btn-block btngame' onclick='training_answer("+id+")' id='btn_"+id+"'>"+block_frame+"</div>";
+                }
+                $('#controller').html(str);
+                str='';
+                str+="<img id='gif' class='img-responsive' src='http://bloper97.fr/r/t7framecoaching/api/img/"+character+"/move_"+answers[good_answer].id+".gif'/>";
+                str+="<div class='col-sm-12 inputLayer'>"+answers[good_answer].move[ 'Command' ]+"</div><br>";
+                str+="<div class='col-sm-12 inputLayer'>"+element+"</div><br>";
+                $('#question').html(str);
             }
             var elements = ['Block frame','Counter hit frame', 'Damage', 'Hit frame', 'Start up frame'];
             var character_id = parseInt($_GET('character'));
@@ -81,12 +127,10 @@
             var frame = frames[character_id];
             var max_answer = 4;
             var answers = [];
-            for(var x=0;x<max_answer;x++){
-                var input = getRandomInt(frame.length);
-                answers.push({'id':input,'move':frame[input]});
-            }
-            var good_answer = getRandomInt(answers.length);
-            var element = elements[0];
+            var good_answer;
+            var element;
+            var affichage = false;
+
         </script>
         <div class="app">
             <div class="container">
@@ -96,23 +140,22 @@
                     </script>
                 </div>
                 <div id="gamescreen">
-                    <script>
-                        document.write("<img id='gif' class='img-responsive' src='http://bloper97.fr/r/t7framecoaching/api/img/"+character+"/move_"+answers[good_answer].id+".gif'/>");
-                        document.write("<div class='col-sm-12 inputLayer'>"+answers[good_answer].move[ 'Command' ]+"</div><br>");
-                        document.write("<div class='col-sm-12 inputLayer'>"+element+"</div><br>");
-                    </script>
+                    <div id="containerPanneauResult" class="animated fadeInRight fadeOutLeft" style="display:none">
+                        <p id="panneauResult">
+                            <span>
+        
+                            </span>
+                        </p>
+                    </div>
+                    <div id="question">
+                    </div>
                 </div>
                 <div id="controller" class="container">
-                    <script>
-                        for(var x=0;x<answers.length;x++){
-                            var answer = answers[x];
-                            var id = answer.id;
-                            var block_frame = answer.move[ element ];
-                            document.write("<div class='col-sm-6 btn btn-block btngame' onclick='training_answer("+id+")' id='btn_"+id+"'>"+block_frame+"</div>");
-                        }
-                    </script>
                 </div>
             </div>
         </div>
+        <script>
+            shuffle();
+        </script>
     </body>
 </html>
