@@ -67,14 +67,15 @@
 
     <body class="menubody" onload="init();">
         <div class="app">
-            <div class="container">
-                <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-12" style="padding-right:0px;">
                     <script>
                         char = $_GET('character');
                         if(char==null){
                             for(x=0;x<characters.length;x++){
                                 character=characters[x];
-                                document.write("<a href='framedata.html?character="+x+"'><p class='character_title'>"+character+"</p></a>");
+                                var name = character.charAt(0).toUpperCase() + character.slice(1);
+                                document.write("<a href='framedata.html?character="+x+"'><p class='character_title'>"+name+"</p></a>");
                             }
                         }else{
                             var character_id = parseInt($_GET('character'));
@@ -84,7 +85,7 @@
                             
                             var keys = Object.keys(frame[0]);
                             console.log(keys);
-                            document.write("<div class='framedata_table'><table>");
+                            document.write("<div class='framedata_table'><table class='table table-bordered header-fixed'>");
                             document.write("<thead><tr>");
                             for(var y=0;y<keys.length;y++){
                                 var c = keys[y];
