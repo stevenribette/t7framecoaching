@@ -86,9 +86,9 @@
                     return false;
                 }
                 if(frame[answer_id][element]==answers[good_answer].move[element]){
-                    panneau_result("c'est gagner");
+                    panneau_result("Good Answer");
                 }else{
-                    panneau_result(""+answers[good_answer].move[ 'Command' ]+" est à "+answers[good_answer].move[ element ]+" en "+element);
+                    panneau_result('The answer was "'+answers[good_answer].move[ element ]+'"');
                 }
             }
             function panneau_result(str){
@@ -105,7 +105,7 @@
                     answers.push({'id':input,'move':frame[input]});
                 }
                 good_answer = getRandomInt(answers.length);
-                element = elements[0];
+                element = elements[getRandomInt(elements.length)];
 
                 var str='';
                 for(var x=0;x<answers.length;x++){
@@ -121,7 +121,7 @@
                 str+="<div class='col-sm-12 inputLayer'>"+element+"</div><br>";
                 $('#question').html(str);
             }
-            var elements = ['Block frame','Counter hit frame', 'Damage', 'Hit frame', 'Start up frame'];
+            var elements = ['Block frame','Counter hit frame', 'Hit frame', 'Start up frame'];
             var character_id = parseInt($_GET('character'));
             var character = characters[character_id];
             var frame = frames[character_id];
@@ -139,19 +139,16 @@
                         document.write("<p class='character_title tekkenfont'>"+character+"</p>");
                     </script>
                 </div>
+                
                 <div id="gamescreen">
-                    <div id="containerPanneauResult" class="animated fadeInRight fadeOutLeft" style="display:none">
-                        <p id="panneauResult">
-                            <span>
-        
-                            </span>
-                        </p>
-                    </div>
-                    <div id="question">
-                    </div>
+                    <div id="question"></div>
                 </div>
-                <div id="controller" class="container">
+                <div id="containerPanneauResult" class="animated fadeInRight fadeOutLeft" style="display:none">
+                    <p id="panneauResult">
+                        <span></span>
+                    </p>
                 </div>
+                <div id="controller" class="container"></div>
             </div>
         </div>
         <script>
