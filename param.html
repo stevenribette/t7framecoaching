@@ -47,10 +47,9 @@
                     storage.removeItem("coin");
                     storage.removeItem("sound");
                     storage.removeItem("vibration");
-                    storage.removeItem("totalfight");
-                    storage.removeItem("totalhit");
                     storage.removeItem("dailycoin");
                     storage.removeItem("achievement");
+
                     document.location.href="index.html";
                 }
             }
@@ -58,22 +57,22 @@
         function MuteSound(value){
             var storage = window.localStorage;
             if($("#"+value+"").attr('checked')){
-                storage.setItem("frtsound",0);
+                storage.setItem("sound",0);
                 $("#"+value+"").removeAttr('checked');
             }
             else{
-                storage.setItem("frtsound",1);
+                storage.setItem("sound",1);
                 $("#"+value+"").attr('checked',"true");
             }
         }
         function MuteVibration(value){
             var storage = window.localStorage;
             if($("#"+value+"").attr('checked')){
-                storage.setItem("frtvibration",0);
+                storage.setItem("vibration",0);
                 $("#"+value+"").removeAttr('checked');
             }
             else{
-                storage.setItem("frtvibration",1);
+                storage.setItem("vibration",1);
                 $("#"+value+"").attr('checked',"true");
             }
         }
@@ -83,9 +82,30 @@
     <body class="menubody" onload="init();">
     <div class="app">
         <div class="container">
-            <button class="btn btn-block btnmenu btnParam" onclick="delData()"><p>R E S ET</p></button>
+            <button class="btn btn-block btnmenu btnParam" onclick="delData()"><p>R E S E T D A T A</p></button>
             <span class="btn btn-block btnmenu btnParam"><input id="checkBoxSound" name="sound" type="checkbox" onclick="MuteSound(this.id)"/><p class="display-inline" style="font-size:100%;">S O U N D</p></span>
             <span class="btn btn-block btnmenu btnParam"><input id="checkBoxVibration" name="vibration" type="checkbox" onclick="MuteVibration(this.id)"/><p class="display-inline" style="font-size:100%;">V I B R A T I O N</p></span>
+            <section id="trainingresult" class="result_section">
+                <h1>Result in training</h1>
+                <table class='table table-bordered'>
+                    <thead>
+                        <tr>
+                            <th>Success</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <script>
+                                var trainsuccesshit = getHit('trainsuccesshit');
+                                var traintotalhit = getHit('traintotalhit');
+                                document.write("<td>"+trainsuccesshit+"</td>");
+                                document.write("<td>"+traintotalhit+"</td>");
+                            </script>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     </body>

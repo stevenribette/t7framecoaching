@@ -20,21 +20,24 @@ function effacerContainer(){
         affichage = false;
     },300);
 }
-function panneau_result(str){
+function panneau_result(str,mode){
     afficherContainer(str);
     setTimeout(function () {
         effacerContainer();
-        shuffle();
+        shuffle(mode);
     }, 3000);
 }
 function training_answer(answer_id){
     if(affichage == true){
         return false;
     }
+    addHit('traintotalhit');
     if(frame[answer_id][element]==answers[good_answer].move[element]){
-        panneau_result("Good Answer");
+        addHit('trainsuccesshit');
+        addCoin(1);
+        panneau_result("Good Answer",'training');
     }else{
-        panneau_result('The answer was "'+answers[good_answer].move[ element ]+'"');
+        panneau_result('The answer was "'+answers[good_answer].move[ element ]+'"','training');
     }
 }
 function training_shuffle(){
@@ -65,4 +68,11 @@ function fight_answer(answer_id){
 }
 function fight_shuffle(){
 
+}
+function shuffle(mode){
+    if(mode=='training'){
+        training_shuffle();
+    }else if(mode=='fight'){
+        fight_shuffle();
+    }
 }

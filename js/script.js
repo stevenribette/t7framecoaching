@@ -68,7 +68,42 @@ function evenement(){
    date = date();
    var storage = window.localStorage;
    loginday = storage.getItem("dailycoin");
+   if(loginday != date){
+      $('#panneauNews').fadeTo( "slow", 1 );
+      $('#panneauNews').text("D A I L Y B O N U S");
+      setTimeout(function () {
+          $('#panneauNews').fadeTo( "slow", 0 );
+      }, 3000);
+      var money = addCoin(10);
+      $('.navbarmoney').text(money);
+      storage.setItem("dailycoin",date);
+  }
 }
 function getRandomInt(max) {
    return Math.floor(Math.random() * Math.floor(max));
+}
+function addCoin(amount){
+   var coin = storage.getItem('coin');
+   coin = parseInt(coin);
+   coin+=amount;
+   storage.setItem('coin',coin);
+   return coin;
+}
+function useCoin(amount){
+   var coin = parseInt(storage.getItem('coin'));
+   coin = parseInt(coin);
+   coin-=amount;
+   storage.setItem('coin',coin);
+   return coin;
+}
+function addHit(target){
+   var hit = storage.getItem(target);
+   hit = parseInt(hit);
+   hit+=1;
+   storage.setItem(target,hit);
+}
+function getHit(target){
+   var hit = storage.getItem(target);
+   hit = parseInt(hit);
+   return hit;
 }

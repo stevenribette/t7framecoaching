@@ -105,3 +105,25 @@ body{
 #containerPanneauResult{
     position: absolute;
 }
+.navbarmoney{
+    margin-right:5%;
+    font-size: 90%;
+    text-align: right;
+    border-bottom: 0px solid deepskyblue;
+}
+#panneauNews{
+    font-size:110%;
+    border-bottom: 0px solid deepskyblue;
+    text-align: center;
+    margin-top:7%;
+    opacity: 0;
+    color: goldenrod;
+}
+.hidden{
+    display:none;
+}
+.result_section{
+    margin-top:5%;
+    color:white;
+    width: 100%;
+}

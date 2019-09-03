@@ -20,9 +20,14 @@
     <body class="menubody" onload="init();">
     <div class="app">
         <div class="container">
+            <p id="panneauNews">
+                <span>
+                    -
+                </span>
+            </p>
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
-                <a href="character.html?mode=fight" class="btn btn-block btnmenu tekkenfont"><p>F I G H T</p></a>
+                <a href="character.html?mode=fight" class="btn btn-block btnmenu tekkenfont hidden"><p>F I G H T</p></a>
             </div>
 
             <div class="col-sm-12"><br></div>
@@ -47,7 +52,7 @@
 
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
-                <a href="param.html" class="btn btn-block btnmenu tekkenfont"><p>O P T I O N S</p></a>
+                <a href="param.html" class="btn btn-block btnmenu tekkenfont"><p>P A R A M E T E R S</p></a>
             </div>
 
             <div class="col-sm-12"><br></div>
@@ -66,6 +71,7 @@
         </div>
     </div>
     </body>
+    <script type="text/javascript" src="js/initdata.js"></script>
     <script type="text/javascript" charset="utf-8">
         function onDeviceReady() {
             document.getElementById('exitApp').addEventListener('click', function() {
