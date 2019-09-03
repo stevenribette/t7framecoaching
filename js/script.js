@@ -3,6 +3,10 @@ var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'htt
 var storage = window.localStorage;
 var characters = ['akuma','alisa','anna','armor_king','asuka','bob','bryan','claudio','devil_jin','dragunov','eddy','eliza','feng','geese','gigas','heihachi','hwoarang','jack7','jin','josie','julia','katarina','kazumi','kazuya','king','kuma','lars','law','lee','lei','leo','lili','lucky_chloe','marduk','master_raven','miguel','negan','nina','noctis','panda','paul','shaheen','steve','xiaoyu','yoshimitsu'];
 var elements = ['Block frame','Counter hit frame', 'Hit frame', 'Start up frame'];
+var soundstatus = storage.getItem("sound");
+function goTo(src){
+   document.location.href=src;  
+}
 function toggleVisibility(elmt)
 {
    if(typeof elmt == "string")
@@ -35,6 +39,43 @@ function $_GET(param) {
         return vars[param] ? vars[param] : null;
     }
     return vars;
+}
+function playSound(src) {
+   if(soundstatus==0){}else{
+       if (window.cordova) {
+           if (deviceType == 'Android') {
+               src = '/android_asset/www/' + src;
+           }
+           var media = new Media(src, success, error_error);
+       } else {
+           var media = new Audio(src, success, error_error);
+       }
+       media.play();
+   }
+   
+}
+function playTheme(srct){
+   if(soundstatus==0){
+   }else{
+       if (window.cordova) {
+           if (deviceType == 'Android') {
+               srct = '/android_asset/www/' + srct;
+           }
+           var theme = new Media(srct, success, error_error);
+       } else {
+           var theme = new Audio(srct, success, error_error);
+       }
+       theme.play();
+       theme.setVolume('0.1');
+   }
+}
+function success() {
+   // ignore
+}
+
+function error_error(e) {
+   alert('bug son');
+   alert(e.message);
 }
 function init() {
     document.addEventListener("backbutton", onBackKeyDown, false);

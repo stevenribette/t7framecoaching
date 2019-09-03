@@ -6,6 +6,8 @@ var answers = [];
 var good_answer;
 var element;
 var affichage = false;
+var background = storage.getItem('gamebackground');
+$('.gamebody').css("background-image", "url('../img/background/game/"+background+"')");
 function afficherContainer(str){
     affichage = true;
     $('#containerPanneauResult').removeClass('fadeOutLeft');

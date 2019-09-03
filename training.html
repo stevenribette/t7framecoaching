@@ -87,6 +87,11 @@
             </div>
         </div>
         <script>
+            function onDeviceReady() {
+                document.getElementById('exitApp').addEventListener('click', function() {
+                    document.location.href='index.html';
+                });
+            }   
             training_shuffle();
         </script>
     </body>

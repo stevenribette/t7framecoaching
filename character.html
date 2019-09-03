@@ -20,13 +20,30 @@
     <body class="menubody" onload="init();">
         <div class="app">
             <div class="container">
-                <script>
-                    mode = $_GET('mode');
-                    for(x=0;x<characters.length;x++){
-                        character=characters[x];
-                        document.write("<a href='"+mode+".html?character="+x+"'><img style=\"display:inline\"class='img-responsive persoList' src='img/character/"+character+".png'></a>");
-                    }
-                </script>
+                <div class="persoDiv" style='text-align: center;'>
+                    <img style="display:inline;text-align: center;" class='img-responsive persoList' src='img/character/akuma.png' onClick='confirm()' id='characterselected'>
+                </div>
+                <div class="persoDiv">
+                    <script>
+                        playSound('sound/menu/select.mp3');
+                        var mode = $_GET('mode');
+                        var char = storage.getItem('favoritecharacter');
+                        var char = parseInt(char);
+                        select(char);
+                        for(x=0;x<characters.length;x++){
+                            character=characters[x];
+                            document.write("<img style=\"display:inline\"class='img-responsive persoList' src='img/character/"+character+".png' onClick='select("+x+")'>");
+                        }
+                        function select(x){
+                            char = x;
+                            $('#characterselected').attr("src",'img/character/'+characters[x]+'.png');
+                        }
+                        function confirm(){
+                            storage.setItem('favoritecharacter',char);
+                            document.location.href=mode+".html?character="+char;
+                        }
+                    </script>
+                </div>
             </div>
         </div>
     </body>

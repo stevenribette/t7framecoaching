@@ -21,11 +21,18 @@ body{
     background-image: url(../img/background/menu.jpg);
 }
 .gamebody{
-    background-image: url(../img/background/game.jpg);
+    background-image: url(../img/background/game/default.jpg);
 }
 .btnmenu{
-    background-color: rgba(0, 0, 0, 0.8);
+    /*background-color: rgba(0, 0, 0, 0.8);*/
     font-size: 3.5vw !important;
+}
+button.btnmenu{
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left !important;
+}
+button.btnmenu:active {
+    border-bottom: 1px solid azure;
 }
 .btnParam{
     margin-top:10%;
@@ -52,7 +59,7 @@ body{
     background-color:white;
 }
 #gamescreen{
-    border: 1px solid goldenrod;
+    border: 1px solid azure;
     margin:auto;
     margin-top: 2%;
 }
@@ -126,4 +133,16 @@ body{
     margin-top:5%;
     color:white;
     width: 100%;
+}
+.persoDiv{
+    padding:20px;
+    border:dotted 1px;
+    white-space:nowrap;
+    overflow-x:auto;
+    scrollbar-base-color:#ffeaff;
+}
+.persoSelection{
+    padding:20px;
+    border:dotted 1px;
+    white-space:nowrap;
 }

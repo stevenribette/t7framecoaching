@@ -29,3 +29,13 @@ if(storage.getItem("trainsuccesshit")){
 }else{
     storage.setItem('trainsuccesshit',0);
 }
+if(storage.getItem("gamebackground")){
+
+}else{
+    storage.setItem('gamebackground','default');
+}
+if(storage.getItem("favoritecharacter")){
+
+}else{
+    storage.setItem('favoritecharacter',0);
+}

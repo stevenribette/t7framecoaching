@@ -25,39 +25,41 @@
                     -
                 </span>
             </p>
+            <div class="hidden">
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
-                <a href="character.html?mode=fight" class="btn btn-block btnmenu tekkenfont hidden"><p>F I G H T</p></a>
+                <button onClick='goTo("character.html?mode=fight")' class="btn btn-block btnmenu tekkenfont"><p>F I G H T</p></button>
+            </div>
             </div>
 
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
-                <a href="character.html?mode=training" class="btn btn-block btnmenu tekkenfont"><p>T R A I N I N G</p></a>
+                <button onClick='goTo("character.html?mode=training")' class="btn btn-block btnmenu tekkenfont"><p>T R A I N I N G</p></button>
             </div>
 
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
-                <a href="framedata.html" class="btn btn-block btnmenu tekkenfont"><p>F R A M E - D A T A</p></a>
+                <button onClick='goTo("framedata.html")' class="btn btn-block btnmenu tekkenfont"><p>F R A M E - D A T A</p></button>
             </div>
 
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
-                <a href="collection.html" class="btn btn-block btnmenu tekkenfont"><p>C O L L E CT I O N</p></a>
+                <button onClick='goTo("collection.html")' class="btn btn-block btnmenu tekkenfont"><p>C O L L E CT I O N</p></button>
             </div>
 
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
-                <a href="tutorial.html" class="btn btn-block btnmenu tekkenfont"><p>T U T O R I A L</p></a>
+                <button onClick='goTo("tutorial.html")' class="btn btn-block btnmenu tekkenfont"><p>T U T O R I A L</p></button>
             </div>
 
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
-                <a href="param.html" class="btn btn-block btnmenu tekkenfont"><p>P A R A M E T E R S</p></a>
+                <button onClick='goTo("param.html")' class="btn btn-block btnmenu tekkenfont"><p>P A R A M E T E R S</p></button>
             </div>
 
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
-                <a href="credit.html" class="btn btn-block btnmenu tekkenfont"><p>C R E D I T S</p></a>
+                <button onClick='goTo("credit.html")' class="btn btn-block btnmenu tekkenfont"><p>C R E D I T S</p></button>
             </div>
             <script>
                 if ( app ) {
@@ -73,6 +75,7 @@
     </body>
     <script type="text/javascript" src="js/initdata.js"></script>
     <script type="text/javascript" charset="utf-8">
+        playSound('sound/menu/entry.mp3');
         function onDeviceReady() {
             document.getElementById('exitApp').addEventListener('click', function() {
                 if (navigator.app) {
@@ -82,28 +85,6 @@
                     navigator.device.exitApp();
                 }
             });
-        }
-        function playAudio(src) {
-            var storage = window.localStorage;
-            soundstatus = storage.getItem("sound");
-            if(soundstatus==0){}else{
-                if (window.cordova) {
-                    if (deviceType == 'Android') {
-                        src = '/android_asset/www/' + src;
-                    }
-                    var media = new Media(src, success, error_error);
-                } else {
-                    var media = new Audio(src, success, error_error);
-                }
-                media.play();
-            }
-        }
-        function success() {
-            // ignore
-        }
-        function error_error(e) {
-            alert('great error');
-            alert(e.message);
         }
         setTimeout(function () {
             evenement();
