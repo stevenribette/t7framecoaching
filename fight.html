@@ -5,6 +5,54 @@
         <meta charset="utf-8" />
         <link href="css/style.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
+
+        <script type="text/javascript" src="json/akuma.js"></script>
+        <script type="text/javascript" src="json/alisa.js"></script>
+        <script type="text/javascript" src="json/anna.js"></script>
+        <script type="text/javascript" src="json/armor_king.js"></script>
+        <script type="text/javascript" src="json/asuka.js"></script>
+        <script type="text/javascript" src="json/bob.js"></script>
+        <script type="text/javascript" src="json/bryan.js"></script>
+        <script type="text/javascript" src="json/claudio.js"></script>
+        <script type="text/javascript" src="json/devil_jin.js"></script>
+        <script type="text/javascript" src="json/dragunov.js"></script>
+        <script type="text/javascript" src="json/eddy.js"></script>
+        <script type="text/javascript" src="json/eliza.js"></script>
+        <script type="text/javascript" src="json/feng.js"></script>
+        <script type="text/javascript" src="json/geese.js"></script>
+        <script type="text/javascript" src="json/gigas.js"></script>
+        <script type="text/javascript" src="json/heihachi.js"></script>
+        <script type="text/javascript" src="json/hwoarang.js"></script>
+        <script type="text/javascript" src="json/jack7.js"></script>
+        <script type="text/javascript" src="json/jin.js"></script>
+        <script type="text/javascript" src="json/josie.js"></script>
+        <script type="text/javascript" src="json/julia.js"></script>
+        <script type="text/javascript" src="json/katarina.js"></script>
+        <script type="text/javascript" src="json/kazumi.js"></script>
+        <script type="text/javascript" src="json/kazuya.js"></script>
+        <script type="text/javascript" src="json/king.js"></script>
+        <script type="text/javascript" src="json/kuma.js"></script>
+        <script type="text/javascript" src="json/lars.js"></script>
+        <script type="text/javascript" src="json/law.js"></script>
+        <script type="text/javascript" src="json/lee.js"></script>
+        <script type="text/javascript" src="json/lei.js"></script>
+        <script type="text/javascript" src="json/leo.js"></script>
+        <script type="text/javascript" src="json/lili.js"></script>
+        <script type="text/javascript" src="json/lucky_chloe.js"></script>
+        <script type="text/javascript" src="json/marduk.js"></script>
+        <script type="text/javascript" src="json/master_raven.js"></script>
+        <script type="text/javascript" src="json/miguel.js"></script>
+        <script type="text/javascript" src="json/negan.js"></script>
+        <script type="text/javascript" src="json/nina.js"></script>
+        <script type="text/javascript" src="json/noctis.js"></script>
+        <script type="text/javascript" src="json/panda.js"></script>
+        <script type="text/javascript" src="json/paul.js"></script>
+        <script type="text/javascript" src="json/shaheen.js"></script>
+        <script type="text/javascript" src="json/steve.js"></script>
+        <script type="text/javascript" src="json/xiaoyu.js"></script>
+        <script type="text/javascript" src="json/yoshimitsu.js"></script>
+        <script type="text/javascript" src="js/frames.js"></script>
+
         <script type="text/javascript" src="js/script.js"></script>
 
         <script src="cordova.js"></script>
@@ -12,16 +60,34 @@
 
         <script src="bootstrap/js/jquery.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/fight.js"></script>
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>t7framecoaching</title>
     </head>
 
-    <body class="menubody" onload="init();">
+    <body class="gamebody" onload="init();">
         <div class="app">
             <div class="container">
+                <div class="col-sm-12">
+                    <script>
+                        document.write("<p class='character_title tekkenfont'>"+character+"</p>");
+                    </script>
+                </div>
                 
+                <div id="gamescreen">
+                    <div id="question"></div>
+                </div>
+                <div id="containerPanneauResult" class="animated fadeInRight fadeOutLeft" style="display:none">
+                    <p id="panneauResult">
+                        <span></span>
+                    </p>
+                </div>
+                <div id="controller" class="container"></div>
             </div>
         </div>
+        <script>
+            fight_shuffle();
+        </script>
     </body>
 </html>
