@@ -94,6 +94,11 @@ button.btnmenu:active {
 	height:600px;
 	overflow-y:scroll;
 }
+.tutorial_table table{
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+}
 .droitParagraph{
     font-family: droitfont;
     text-align: center;
