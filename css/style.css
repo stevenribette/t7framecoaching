@@ -15,7 +15,7 @@ p{
 body{
     background-repeat: no-repeat;
     background-attachment:fixed;
-    background-size: cover;
+    background-size: auto;
 }
 .menubody{
     background-image: url(../img/background/menu.jpg);

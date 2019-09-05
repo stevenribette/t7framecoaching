@@ -78,13 +78,11 @@ function error_error(e) {
    alert(e.message);
 }
 function init() {
-    document.addEventListener("backbutton", onBackKeyDown, false);
-    document.addEventListener("deviceready", onDeviceReady, false);
-    if (window.cordova) {
-        
-    }else{
-
-    }
+   document.addEventListener("backbutton", onBackKeyDown, false);
+}
+function onBackKeyDown(e) { 
+   e.preventDefault(); 
+   document.location.href='index.html';
 }
 function date(){
    var tab_jour=new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");

@@ -27,16 +27,6 @@
                 $("#checkBoxVibration").attr('checked',"true");
             }
         }
-        function onDeviceReady() {
-            document.getElementById('exitApp').addEventListener('click', function() {
-                if (navigator.app) {
-                    navigator.app.exitApp();
-                }
-                else if (navigator.device) {
-                    navigator.device.exitApp();
-                }
-            });
-        }
         function delData(){
             var temp = "You are going to erase all of your data";
             if (confirm(temp)){
