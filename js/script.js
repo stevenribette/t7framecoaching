@@ -4,6 +4,7 @@ var storage = window.localStorage;
 var characters = ['akuma','alisa','anna','armor_king','asuka','bob','bryan','claudio','devil_jin','dragunov','eddy','eliza','feng','geese','gigas','heihachi','hwoarang','jack7','jin','josie','julia','katarina','kazumi','kazuya','king','kuma','lars','law','lee','lei','leo','lili','lucky_chloe','marduk','master_raven','miguel','negan','nina','noctis','panda','paul','shaheen','steve','xiaoyu','yoshimitsu'];
 var elements = ['Block frame','Counter hit frame', 'Hit frame', 'Start up frame'];
 var soundstatus = storage.getItem("sound");
+var background = storage.getItem('gamebackground');
 function goTo(src){
    document.location.href=src;  
 }

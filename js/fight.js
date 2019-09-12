@@ -6,7 +6,6 @@ var answers = [];
 var good_answer;
 var element;
 var affichage = false;
-var background = storage.getItem('gamebackground');
 function afficherContainer(str){
     affichage = true;
     $('#containerPanneauResult').removeClass('fadeOutLeft');

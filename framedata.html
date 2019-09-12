@@ -66,55 +66,85 @@
     </head>
 
     <body class="menubody" onload="init();">
-        <div class="app">
-            <div class="row container">
-                <div class="col-sm-12" style="padding:0px;">
-                    <script>
-                        char = $_GET('character');
-                        if(char==null){
-                            for(x=0;x<characters.length;x++){
-                                character=characters[x];
-                                var name = character.charAt(0).toUpperCase() + character.slice(1);
-                                document.write("<a href='framedata.html?character="+x+"'><p class='character_title'>"+name+"</p></a>");
-                            }
-                        }else{
-                            var character_id = parseInt($_GET('character'));
-                            var character = characters[character_id];
-                            var frame = frames[character_id];
-                            
-                            
-                            var keys = Object.keys(frame[0]);
-                            console.log(keys);
-                            document.write("<div class='framedata_table'><table class='table table-bordered header-fixed'>");
-                            document.write("<thead><tr>");
-                            for(var y=0;y<keys.length;y++){
-                                var c = keys[y];
-                                console.log(c);
-                                if(y==0){
-                                    document.write("<th class='headcol'>"+c+"</th>");
-                                }else{
-                                    document.write("<th>"+c+"</th>");
-                                }
-                            }
-                            document.write("</tr></thead>");
-                            document.write("<tbody>");
-                            for(var x=0;x<frame.length;x++){
-                                document.write("<tr>");
-                                for(var y=0;y<keys.length;y++){
-                                    var c = frame[x][keys[y]];
-                                    if(y==0){
-                                        document.write("<td class='headcol'>"+c+"</td>");
-                                    }else{
-                                        document.write("<td>"+c+"</td>");
-                                    }
-                                }
-                                document.write("</tr>");
-                            }
-                            document.write("</tbody></table></div>");
-                        }
-                    </script>
+        <div class="app container">
+            <div class="col-sm-12" style="padding:0px;">
+                <div class="input-group">
+                    <span class="glyphicon glyphicon-search input-group-addon" id="sizing-addon2" onclick="search()"></span>
+                    <input type="text" class="form-control" placeholder="Input" aria-describedby="sizing-addon2" id="search_bar">
                 </div>
+                <div id="controller">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"><img onclick="btn('u')" class="btn btngame" id="btnu"  src="img/btn/u.png"/></td>
+                                <td colspan="2"><img onclick="btn('2')" class="btn btngame" id="btn2" style="display: inline" src="img/btn/2.png"/></td>
+                            </tr>
+                            <tr>
+                                
+                                
+                                <td><img onclick="btn('b')" class="btn btngame" id="btnb" style="display: inline" src="img/btn/b.png"/></td>
+                                <td><img onclick="btn('f')" class="btn btngame" id="btnf" style="display: inline" src="img/btn/f.png"/></td>
+                                <td ><img onclick="btn('1')" class="btn btngame" id="btn1"  src="img/btn/1.png"/></td>
+                                <td><img onclick="btn('4')" class="btn btngame" id="btn4" src="img/btn/4.png"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><img onclick="btn('d')" class="btn btngame" id="btnd" src="img/btn/d.png"/></td>
+                                <td colspan="2"><img onclick="btn('3')" class="btn btngame" id="btn3" style="display: inline" src="img/btn/3.png"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <script>
+                    char = $_GET('character');
+                    if(char==null){
+                        for(x=0;x<characters.length;x++){
+                            character=characters[x];
+                            var name = character.charAt(0).toUpperCase() + character.slice(1);
+                            document.write("<a href='framedata.html?character="+x+"'><p class='character_title'>"+name+"</p></a>");
+                        }
+                    }else{
+                        var character_id = parseInt($_GET('character'));
+                        var character = characters[character_id];
+                        var frame = frames[character_id];
+                        
+                        var keys = Object.keys(frame[0]);
+                        document.write("<div class='framedata_table'><table class='table'><tbody>");
+                        console.log(frame[0]);
+                        var keyl = keys.length-1;
+                        for(var x=0;x<frame.length;x++){
+                            document.write("<tr class='framedata_command'><td rowspan='"+keyl+"'>"+frame[x]['Command']+"</td>");
+                            document.write("<td class='framedata_properties'>"+keys[1]+" : "+frame[x][keys[1]]+"</td></tr>");
+                            for(var y=2;y<keys.length;y++){
+                                document.write("<tr><td class='framedata_properties'>"+keys[y]+" : "+frame[x][keys[y]]+"</td></tr>");
+                            }
+                        }
+                        document.write("</tbody></table></div>");
+                    }
+                    function search(){
+                        console.log('oui');
+                    }
+                    function btn(input){
+                        var val = $("#search_bar").val();
+                        var ret="";
+                        if(val==""){
+                            ret=input;
+                        }else{
+                            ret+=val;
+                            var last = val[val.length -1];
+                            if(isNaN(input)){
+                                ret+="/";
+                            }else{
+                                ret+="+";
+                            }
+                            ret+=input;
+                        }
+                        $("#search_bar").val(ret);
+                    }
+                </script>
             </div>
         </div>
+        <script>
+            $('.menubody').css("background-image", "url(img/background/game/"+background+")");
+        </script>
     </body>
 </html>

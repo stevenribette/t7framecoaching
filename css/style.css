@@ -86,25 +86,17 @@ button.btnmenu:active {
     font-size: 120%;
     text-align: center;
 }
-.framedata_table table{
-    margin-bottom: 0px;
-}
 .framedata_table{
     color:white;
     width: 100%;
 }
-.framedata_table thead {
-	display:block;
+.framedata_command{
+    margin:1%;
 }
-.framedata_table tbody {
-	display:block;
-	height:600px;
-	overflow-y:scroll;
-}
-.tutorial_table table{
-    display: block;
-    width: 100%;
-    overflow-x: scroll;
+.framedata_properties{
+    color:white;
+    font-size: 90%;
+    width: 70%;
 }
 .droitParagraph{
     font-family: droitfont;
@@ -157,4 +149,40 @@ button.btnmenu:active {
     padding:20px;
     border:dotted 1px;
     white-space:nowrap;
+}
+#controller{
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius:1000px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 2%;
+}
+#btn2, #btn3{
+    max-width: 30%;
+    margin-left: 37%;
+    float: none;
+}
+#btn1, #btn4{
+    max-width: 60%;
+}
+#btn1{
+    float: right;
+}
+#btnu, #btnd{
+    max-width: 30%;
+    margin-left: 36%;
+    float: none;
+}
+#btnb, #btnf{
+    max-width: 60%;
+}
+#btnb{
+    float: right;
+}
+.btngame{
+    background-color: rgba(0, 0, 0, 0.0);
+}
+.btn{
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
 }
