@@ -32,7 +32,7 @@ if(storage.getItem("trainsuccesshit")){
 if(storage.getItem("gamebackground")){
 
 }else{
-    storage.setItem('gamebackground','default');
+    storage.setItem('gamebackground','default.jpg');
 }
 if(storage.getItem("favoritecharacter")){
 

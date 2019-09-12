@@ -41,9 +41,9 @@ function $_GET(param) {
     return vars;
 }
 function playSound(src) {
-   if(soundstatus==0){}else{
+   if(soundstatus!=0){
        if (window.cordova) {
-           if (deviceType == 'Android') {
+           if (deviceType == 'Android'){
                src = '/android_asset/www/' + src;
            }
            var media = new Media(src, success, error_error);
@@ -55,9 +55,8 @@ function playSound(src) {
    
 }
 function playTheme(srct){
-   if(soundstatus==0){
-   }else{
-       if (window.cordova) {
+   if(soundstatus!=0){
+       if (window.cordova){
            if (deviceType == 'Android') {
                srct = '/android_asset/www/' + srct;
            }
