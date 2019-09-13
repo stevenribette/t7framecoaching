@@ -71,6 +71,7 @@
                 <div class="input-group">
                     <span class="glyphicon glyphicon-search input-group-addon" id="sizing-addon2" onclick="search()"></span>
                     <input type="text" class="form-control" placeholder="Input" aria-describedby="sizing-addon2" id="search_bar">
+                    <span class="glyphicon glyphicon-remove input-group-addon" id="sizing-addon1" onclick="deleteSearch()"></span>
                 </div>
                 <div id="controller">
                     <table>
@@ -94,34 +95,18 @@
                         </tbody>
                     </table>
                 </div>
+                <div id="screen"></div>
                 <script>
                     char = $_GET('character');
-                    if(char==null){
-                        for(x=0;x<characters.length;x++){
-                            character=characters[x];
-                            var name = character.charAt(0).toUpperCase() + character.slice(1);
-                            document.write("<a href='framedata.html?character="+x+"'><p class='character_title'>"+name+"</p></a>");
-                        }
-                    }else{
-                        var character_id = parseInt($_GET('character'));
-                        var character = characters[character_id];
-                        var frame = frames[character_id];
-                        
-                        var keys = Object.keys(frame[0]);
-                        document.write("<div class='framedata_table'><table class='table'><tbody>");
-                        console.log(frame[0]);
-                        var keyl = keys.length-1;
-                        for(var x=0;x<frame.length;x++){
-                            document.write("<tr class='framedata_command'><td rowspan='"+keyl+"'>"+frame[x]['Command']+"</td>");
-                            document.write("<td class='framedata_properties'>"+keys[1]+" : "+frame[x][keys[1]]+"</td></tr>");
-                            for(var y=2;y<keys.length;y++){
-                                document.write("<tr><td class='framedata_properties'>"+keys[y]+" : "+frame[x][keys[y]]+"</td></tr>");
-                            }
-                        }
-                        document.write("</tbody></table></div>");
-                    }
+                    var character_id = parseInt($_GET('character'));
+                    var character = characters[character_id];
+                    var frame = frames[character_id];
+                    
+                    var keys = Object.keys(frame[0]);
+                    afficher("");
                     function search(){
-                        console.log('oui');
+                        var val = $("#search_bar").val();
+                        afficher(val);
                     }
                     function btn(input){
                         var val = $("#search_bar").val();
@@ -132,13 +117,37 @@
                             ret+=val;
                             var last = val[val.length -1];
                             if(isNaN(input)){
-                                ret+="/";
+                                if(isNaN(last)){
+                                    ret+="/";
+                                }else{
+                                    ret+=", ";
+                                }
                             }else{
                                 ret+="+";
                             }
                             ret+=input;
                         }
                         $("#search_bar").val(ret);
+                    }
+                    function afficher(search){
+                        var ret = "";
+                        ret+="<div class='framedata_table'><table class='table'><tbody>";
+                        var keyl = keys.length-1;
+                        for(var x=0;x<frame.length;x++){
+                            if(frame[x]['Command'].includes(search)){
+                                ret+="<tr class='framedata_command'><td rowspan='"+keyl+"'>"+frame[x]['Command']+"</td>";
+                                ret+="<td class='framedata_properties'>"+keys[1]+" : "+frame[x][keys[1]]+"</td></tr>";
+                                for(var y=2;y<keys.length;y++){
+                                    ret+="<tr><td class='framedata_properties'>"+keys[y]+" : "+frame[x][keys[y]]+"</td></tr>";
+                                }
+                            }
+                        }
+                        ret+="</tbody></table></div>";
+                        $('#screen').html(ret);
+                    }
+                    function deleteSearch(){
+                        $("#search_bar").val("");
+                        afficher("");
                     }
                 </script>
             </div>
