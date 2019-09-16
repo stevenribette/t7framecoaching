@@ -169,23 +169,23 @@ button.btnmenu:active {
     margin-top: 2%;
 }
 #btn2, #btn3{
-    max-width: 30%;
-    margin-left: 37%;
+    max-width: 40%;
+    margin-left: 31%;
     float: none;
 }
 #btn1, #btn4{
-    max-width: 60%;
+    max-width: 80%;
 }
 #btn1{
     float: right;
 }
 #btnu, #btnd{
-    max-width: 30%;
-    margin-left: 36%;
+    max-width: 40%;
+    margin-left: 31%;
     float: none;
 }
 #btnb, #btnf{
-    max-width: 60%;
+    max-width: 80%;
 }
 #btnb{
     float: right;
