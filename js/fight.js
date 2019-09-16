@@ -42,12 +42,22 @@ function training_answer(answer_id){
 }
 function training_shuffle(){
     answers = [];
+    element = elements[getRandomInt(elements.length)];
     for(var x=0;x<max_answer;x++){
         var input = getRandomInt(frame.length);
-        answers.push({'id':input,'move':frame[input]});
+        var check = true;
+        for(var y=0;y<answers.length;y++){
+            if(answers[y].move[element]==frame[input][element]){
+                check=false;
+                x--;
+                break;
+            }
+        }
+        if(check==true){
+            answers.push({'id':input,'move':frame[input]});
+        }
     }
     good_answer = getRandomInt(answers.length);
-    element = elements[getRandomInt(elements.length)];
 
     var str='';
     for(var x=0;x<answers.length;x++){

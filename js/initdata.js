@@ -34,6 +34,11 @@ if(storage.getItem("gamebackground")){
 }else{
     storage.setItem('gamebackground','default.jpg');
 }
+if(storage.getItem("backgroundunlocked")){
+
+}else{
+    storage.setItem('backgroundunlocked', JSON.stringify(['default.jpg']));
+}
 if(storage.getItem("favoritecharacter")){
 
 }else{

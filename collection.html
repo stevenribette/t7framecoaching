@@ -19,25 +19,56 @@
 
     <body class="menubody" onload="init();">
         <div class="app">
-            <div class="container">
+            <div class="noPadding container">
+                <script>
+                    document.write('<nav class="navbar navbar-fixed-top" style="text-align:center;margin-top:2%;">');
+                    document.write('<p class="navbarmoney">'+storage.getItem("coin")+'</p>');
+                    document.write('</nav>');
+                </script>
                 <div id="collectionDiv" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                     <script>
-                        var backgrounds = ['default.jpg','negan.png','eliza.png'];
+                        var backgrounds = [{name:'default.jpg',price:0},{name:'negan.png',price:10},{name:'eliza.png',price:50}];
+                        var bgunlocked = storage.getItem("backgroundunlocked");
+                        bgunlocked = JSON.parse(bgunlocked);
                         for(x=0;x<backgrounds.length;x++){
-                            if(x==0){
-                                document.write('<div class="item active">');
-                            }else{
-                                document.write('<div class="item">');
+                            status=0;
+                            for(y=0;y<bgunlocked.length;y++){
+                                if(bgunlocked[y]==backgrounds[x].name){
+                                    if(x==0){
+                                        document.write('<div class="item active">');
+                                    }else{
+                                        document.write('<div class="item desactive">');
+                                    }
+                                    background=backgrounds[x];
+                                    document.write("<img style=\"display:inline\"class='img-responsive backgroundList' src='img/background/game/"+background.name+"' onClick='setGameBackground("+x+")'>");
+                                    document.write('</div>');
+                                    status=1;
+                                }
                             }
-                            background=backgrounds[x];
-                            document.write("<img style=\"display:inline\"class='img-responsive backgroundList' src='img/background/game/"+background+"' onClick='setGameBackground("+x+")'>");
-                            document.write('</div>');
+                            if(status==0){
+                                document.write('<div class="item desactive collectionlock">');
+                                document.write("<img style=\"display:inline\"class='img-responsive backgroundList' src='img/background/game/"+backgrounds[x].name+"' onClick='buyBackground("+x+")'>");
+                                document.write('<div class="carousel-caption">');
+                                document.write('<p class="collectionname">'+backgrounds[x].price+'</p>');
+                                document.write('</div>');
+                                document.write('</div>');
+                            }   
                         }   
                         function setGameBackground(index){
-                            console.log(index);
-                            storage.setItem('gamebackground',backgrounds[index]);
+                            storage.setItem('gamebackground',backgrounds[index].name);
                             document.location.href="index.html";
+                        }
+                        function buyBackground(x){
+                            var coin = storage.getItem('coin');
+                            coin = parseInt(coin);
+                            var bg = backgrounds[x];
+                            if(coin>bg.price){
+                                bgunlocked.push(bg.name);
+                                storage.setItem('backgroundunlocked',JSON.stringify(bgunlocked));
+                                storage.setItem('coin',coin-bg.price);
+                                setGameBackground(x);
+                            }
                         }
                     </script>
                     <!-- Left and right controls -->

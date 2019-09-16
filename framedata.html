@@ -68,29 +68,28 @@
     <body class="menubody" onload="init();">
         <div class="app container">
             <div class="col-sm-12" style="padding:0px;">
-                <div class="input-group">
-                    <span class="glyphicon glyphicon-search input-group-addon" id="sizing-addon2" onclick="search()"></span>
-                    <input type="text" class="form-control" placeholder="Input" aria-describedby="sizing-addon2" id="search_bar">
+                <div class="input-group" style="margin-top: 1%;">
+                    <input type="text" class="form-control" placeholder="Input" aria-describedby="sizing-addon2" id="search_bar" onchange="search()">
                     <span class="glyphicon glyphicon-remove input-group-addon" id="sizing-addon1" onclick="deleteSearch()"></span>
                 </div>
-                <div id="controller">
+                <div id="framedata_controller">
                     <table>
                         <tbody>
                             <tr>
-                                <td colspan="2"><img onclick="btn('u')" class="btn btngame" id="btnu"  src="img/btn/u.png"/></td>
-                                <td colspan="2"><img onclick="btn('2')" class="btn btngame" id="btn2" style="display: inline" src="img/btn/2.png"/></td>
+                                <td colspan="2"><img onclick="btn('u')" class="btn fd_btngame" id="btnu"  src="img/btn/u.png"/></td>
+                                <td colspan="2"><img onclick="btn('2')" class="btn fd_btngame" id="btn2" style="display: inline" src="img/btn/2.png"/></td>
                             </tr>
                             <tr>
                                 
                                 
-                                <td><img onclick="btn('b')" class="btn btngame" id="btnb" style="display: inline" src="img/btn/b.png"/></td>
-                                <td><img onclick="btn('f')" class="btn btngame" id="btnf" style="display: inline" src="img/btn/f.png"/></td>
-                                <td ><img onclick="btn('1')" class="btn btngame" id="btn1"  src="img/btn/1.png"/></td>
-                                <td><img onclick="btn('4')" class="btn btngame" id="btn4" src="img/btn/4.png"/></td>
+                                <td><img onclick="btn('b')" class="btn fd_btngame" id="btnb" style="display: inline" src="img/btn/b.png"/></td>
+                                <td><img onclick="btn('f')" class="btn fd_btngame" id="btnf" style="display: inline" src="img/btn/f.png"/></td>
+                                <td ><img onclick="btn('1')" class="btn fd_btngame" id="btn1"  src="img/btn/1.png"/></td>
+                                <td><img onclick="btn('4')" class="btn fd_btngame" id="btn4" src="img/btn/4.png"/></td>
                             </tr>
                             <tr>
-                                <td colspan="2"><img onclick="btn('d')" class="btn btngame" id="btnd" src="img/btn/d.png"/></td>
-                                <td colspan="2"><img onclick="btn('3')" class="btn btngame" id="btn3" style="display: inline" src="img/btn/3.png"/></td>
+                                <td colspan="2"><img onclick="btn('d')" class="btn fd_btngame" id="btnd" src="img/btn/d.png"/></td>
+                                <td colspan="2"><img onclick="btn('3')" class="btn fd_btngame" id="btn3" style="display: inline" src="img/btn/3.png"/></td>
                             </tr>
                         </tbody>
                     </table>
@@ -128,6 +127,7 @@
                             ret+=input;
                         }
                         $("#search_bar").val(ret);
+                        search();
                     }
                     function afficher(search){
                         var ret = "";
@@ -153,7 +153,7 @@
             </div>
         </div>
         <script>
-            $('.menubody').css("background-image", "url(img/background/game/"+background+")");
+            $('.menubody').css("background-image", "url(img/background/game/default.jpg)");
         </script>
     </body>
 </html>
