@@ -17,7 +17,7 @@
         <title>t7framecoaching</title>
     </head>
 
-    <body class="menubody" onload="init();">
+    <body onload="init();" style="background-color: black;">
         <div class="app">
             <div class="noPadding container">
                 <script>
@@ -28,7 +28,7 @@
                 <div id="collectionDiv" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                     <script>
-                        var backgrounds = [{name:'default.jpg',price:0},{name:'negan.png',price:10},{name:'eliza.png',price:50}];
+                        var backgrounds = [{name:'default.jpg',price:0},{name:'tekken_girls.png',price:25},{name:'messatsu.png',price:25},{name:'dorya.png',price:25},{name:'negan.png',price:50},{name:'eliza.png',price:50}];
                         var bgunlocked = storage.getItem("backgroundunlocked");
                         bgunlocked = JSON.parse(bgunlocked);
                         for(x=0;x<backgrounds.length;x++){
@@ -60,10 +60,11 @@
                             document.location.href="index.html";
                         }
                         function buyBackground(x){
+                            console.log(x);
                             var coin = storage.getItem('coin');
                             coin = parseInt(coin);
                             var bg = backgrounds[x];
-                            if(coin>bg.price){
+                            if(coin>=bg.price){
                                 bgunlocked.push(bg.name);
                                 storage.setItem('backgroundunlocked',JSON.stringify(bgunlocked));
                                 storage.setItem('coin',coin-bg.price);

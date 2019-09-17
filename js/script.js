@@ -2,7 +2,7 @@ var deviceType = (navigator.userAgent.match(/iPad/i))  == "iPad" ? "iPad" : (nav
 var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
 var storage = window.localStorage;
 var characters = ['akuma','alisa','anna','armor_king','asuka','bob','bryan','claudio','devil_jin','dragunov','eddy','eliza','feng','geese','gigas','heihachi','hwoarang','jack7','jin','josie','julia','katarina','kazumi','kazuya','king','kuma','lars','law','lee','lei','leo','lili','lucky_chloe','marduk','master_raven','miguel','negan','nina','noctis','panda','paul','shaheen','steve','xiaoyu','yoshimitsu'];
-var elements = ['Block frame','Counter hit frame', 'Hit frame'];
+var elements = ['Block frame','Counter hit frame', 'Hit frame','Start up frame'];
 var soundstatus = storage.getItem("sound");
 var background = storage.getItem('gamebackground');
 function goTo(src){
@@ -42,7 +42,7 @@ function $_GET(param) {
     return vars;
 }
 function playSound(src) {
-   if(soundstatus!=0){
+   if(soundstatus==0){}else{
        if (window.cordova) {
            if (deviceType == 'Android'){
                src = '/android_asset/www/' + src;
@@ -56,7 +56,7 @@ function playSound(src) {
    
 }
 function playTheme(srct){
-   if(soundstatus!=0){
+   if(soundstatus==0){}else{
        if (window.cordova){
            if (deviceType == 'Android') {
                srct = '/android_asset/www/' + srct;

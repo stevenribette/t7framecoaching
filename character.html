@@ -20,23 +20,29 @@
     <body class="menubody" onload="init();">
         <div class="app">
             <div class="container">
-                <div class="persoDiv" style='text-align: center;'>
-                    <img style="display:inline;text-align: center;" class='img-responsive persoList' src='img/character/akuma.png' onClick='confirm()' id='characterselected'>
-                </div>
                 <div class="persoDiv">
                     <script>
-                        //playSound('sound/menu/select.mp3');
+                        //playSound('sound/menu/character_menu.mp3');
                         var mode = $_GET('mode');
                         var char = storage.getItem('favoritecharacter');
                         var char = parseInt(char);
-                        select(char);
                         for(x=0;x<characters.length;x++){
                             character=characters[x];
-                            document.write("<img style=\"display:inline\"class='img-responsive persoList' src='img/character/"+character+".png' onClick='select("+x+")'>");
+                            document.write("<img style=\"display:inline\"class='img-responsive persoList' src='img/character/"+character+".png' onClick='select("+x+")' id='char_"+x+"'>");
                         }
+                        $('#char_'+char).addClass('characterselected');
+                        $('html,body').animate({
+                            scrollTop: $('#char_'+char).offset().top
+                        }, 'medium');
                         function select(x){
-                            char = x;
-                            $('#characterselected').attr("src",'img/character/'+characters[x]+'.png');
+                            if(char==x){
+                                confirm();
+                            }else{
+                                $('#char_'+char).removeClass('characterselected');
+                                char = x;
+                                $('#char_'+x).addClass('characterselected');
+                                //$('#char_'+x).attr("src",'img/character/'+characters[x]+'.png');
+                            }
                         }
                         function confirm(){
                             storage.setItem('favoritecharacter',char);

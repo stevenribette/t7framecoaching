@@ -35,10 +35,16 @@ function training_answer(answer_id){
     if(frame[answer_id][element]==answers[good_answer].move[element]){
         addHit('trainsuccesshit');
         addCoin(1);
-        panneau_result("Good Answer",'training');
+        //panneau_result("Good Answer",'training');
+        $("#btn_"+answer_id).css("background-color", "green");
     }else{
-        panneau_result('The answer was "'+answers[good_answer].move[ element ]+'"','training');
+        $("#btn_"+answer_id).css("background-color", "red");
+        $("#btn_"+answers[good_answer].id).css("background-color", "green");
+        //panneau_result('The answer was "'+answers[good_answer].move[ element ]+'"','training');
     }
+    setTimeout(function () {
+        shuffle('training');
+    }, 3000);
 }
 function training_shuffle(){
     answers = [];
@@ -68,7 +74,7 @@ function training_shuffle(){
     }
     $('#controller').html(str);
     str='';
-    str+="<img id='gif' class='img-responsive' src='http://bloper97.fr/r/t7framecoaching/api/img/"+character+"/move_"+answers[good_answer].id+".gif'/>";
+    //str+="<img id='gif' class='img-responsive' src='http://bloper97.fr/r/t7framecoaching/api/img/"+character+"/move_"+answers[good_answer].id+".gif'/>";
     str+="<div class='col-sm-12 inputLayer'>"+answers[good_answer].move[ 'Command' ]+"</div><br>";
     str+="<div class='col-sm-12 inputLayer'>"+element+"</div><br>";
     $('#question').html(str);

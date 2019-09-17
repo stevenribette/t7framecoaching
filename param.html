@@ -16,7 +16,6 @@
         <title>t7framecoaching</title>
         <script type="text/javascript" charset="utf-8">
         function init() {
-            document.addEventListener("deviceready", onDeviceReady, false);
             var storage = window.localStorage;
             soundstatus = storage.getItem("sound"); 
             if(soundstatus==1){
@@ -42,7 +41,7 @@
                     storage.removeItem("trainsuccesshit");
                     storage.removeItem("gamebackground");
                     storage.removeItem("favoritecharacter");
-
+                    storage.removeItem("backgroundunlocked");
                     document.location.href="index.html";
                 }
             }

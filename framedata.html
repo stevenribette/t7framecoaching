@@ -68,8 +68,24 @@
     <body class="menubody" onload="init();">
         <div class="app container">
             <div class="col-sm-12" style="padding:0px;">
-                <div class="input-group" style="margin-top: 1%;">
-                    <input type="text" class="form-control" placeholder="Input" aria-describedby="sizing-addon2" id="search_bar" onchange="search()">
+                <div class="form-group" style="margin-top: 1%;margin-bottom: 1%;">
+                    <select class="form-control" id="properties_select" onchange="selectProperties(this.value)">
+                        <script>            
+                            var char = $_GET('character');
+                            var character_id = parseInt($_GET('character'));
+                            var character = characters[character_id];
+                            var frame = frames[character_id];
+                            
+                            var keys = Object.keys(frame[0]);
+                            var properties = "Command";
+                            for(var x=0;x<keys.length;x++){
+                                document.write("<option>"+keys[x]+"</option>");
+                            }
+                        </script>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Command" aria-describedby="sizing-addon2" id="search_bar" onchange="search()">
                     <span class="glyphicon glyphicon-remove input-group-addon" id="sizing-addon1" onclick="deleteSearch()"></span>
                 </div>
                 <div id="framedata_controller">
@@ -96,12 +112,6 @@
                 </div>
                 <div id="screen"></div>
                 <script>
-                    char = $_GET('character');
-                    var character_id = parseInt($_GET('character'));
-                    var character = characters[character_id];
-                    var frame = frames[character_id];
-                    
-                    var keys = Object.keys(frame[0]);
                     afficher("");
                     function search(){
                         var val = $("#search_bar").val();
@@ -134,7 +144,7 @@
                         ret+="<div class='framedata_table'><table class='table'><tbody>";
                         var keyl = keys.length-1;
                         for(var x=0;x<frame.length;x++){
-                            if(frame[x]['Command'].includes(search)){
+                            if(frame[x][properties].includes(search)){
                                 ret+="<tr class='framedata_command'><td rowspan='"+keyl+"'>"+frame[x]['Command']+"</td>";
                                 ret+="<td class='framedata_properties'>"+keys[1]+" : "+frame[x][keys[1]]+"</td></tr>";
                                 for(var y=2;y<keys.length;y++){
@@ -148,6 +158,10 @@
                     function deleteSearch(){
                         $("#search_bar").val("");
                         afficher("");
+                    }
+                    function selectProperties(value){
+                        this.properties = value;
+                        $("#search_bar").attr("placeholder", value);
                     }
                 </script>
             </div>

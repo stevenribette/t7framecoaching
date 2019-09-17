@@ -19,108 +19,88 @@
 
     <body class="menubody" onload="init();">
         <div class="app">
-            <div class="row">
-                <div class="col-sm-12 tutorial_table" style="padding-right:0px;">
-                    <br>
-                    <p class="droitParagraph">Here we will see how to use the frame data.</p>
-                    <br>
-                    <table class='table table-bordered' style='color:white;overflow-x: scroll'>
-                        <thead>
-                            <tr>
-                                <th class='headcol'>Command</th>
-                                <th class='headcol'>Hit level</th>
-                                <th class='headcol'>Damage</th>
-                                <th class='headcol'>Start up frame</th>
-                                <th class='headcol'>Block frame</th>
-                                <th class='headcol'>Hit frame</th>
-                                <th class='headcol'>Counter hit frame</th>
-                                <th class='headcol'>Notes</th>
-                            </tr>
-                        </thead>
+            <div class="col-sm-12 tutorial_table" style="padding-right:0px;color:white;">
+                <br>
+                <p class="droitParagraph">Here we will see how to use the frame data.</p>
+                <br>
+                <div class='framedata_table'>
+                    <table class='table'>
                         <tbody>
-                            <tr>
-                                <td class='headcol'>1</td>
-                                <td class='headcol'>h</td>
-                                <td class='headcol'>7</td>
-                                <td class='headcol'>10</td>
-                                <td class='headcol'>+1</td>
-                                <td class='headcol'>+8</td>
-                                <td class='headcol'>+8</td>
-                                <td class='headcol'>-</td>
+                            <tr class='framedata_command'>
+                                <td class='framedata_properties' style="width: 50%;" rowspan="7">1</td>
+                                <td class='framedata_properties'>Hit level : h</td>
+                            </tr>
+                                <tr><td class='framedata_properties'>Damage : 7</td></tr>
+                                <tr><td class='framedata_properties'>Start up frame : 10</td></tr>
+                                <tr><td class='framedata_properties'>Block frame : +1</td></tr>
+                                <tr><td class='framedata_properties'>Hit frame : +8</td></tr>
+                                <tr><td class='framedata_properties'>Couter hit frame : +8</td></tr>
+                                <tr><td class='framedata_properties'>Notes : -</td></tr>
                             </tr>
                         </tbody>
                     </table>
-                    <br>
-                    <p class="droitParagraph">This basic move is a jab, a left punch, the command to do it is to use 1.</p>
-                    <br>
-                    <p class="droitParagraph">So left punch is 1, SQUARE on PS4, X on XBOX.</p>
-                    <p class="droitParagraph">Right punch is 2, TRIANGLE on PS4, Y on XBOX.</p>
-                    <p class="droitParagraph">Left kick is 3, CROSS on PS4, A on XBOX.</p>
-                    <p class="droitParagraph">Right kick is 4, CIRCLE on PS4, B on XBOX.</p>
-                    <br>
-                    <table class='table table-bordered' style='color:white;overflow-x: scroll'>
-                        <thead>
-                            <tr>
-                                <th class='headcol'>Command</th>
-                                <th class='headcol'>Hit level</th>
-                                <th class='headcol'>Damage</th>
-                                <th class='headcol'>Start up frame</th>
-                                <th class='headcol'>Block frame</th>
-                                <th class='headcol'>Hit frame</th>
-                                <th class='headcol'>Counter hit frame</th>
-                                <th class='headcol'>Notes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class='headcol'>b+1</td>
-                                <td class='headcol'>h</td>
-                                <td class='headcol'>17</td>
-                                <td class='headcol'>13~14</td>
-                                <td class='headcol'>-14~-13</td>
-                                <td class='headcol'>+2~+3</td>
-                                <td class='headcol'>CS</td>
-                                <td class='headcol'>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <br>
-                    <p class="droitParagraph">This move need to press b and 1, b is a direction.</p>
-                    <br>
-                    <p class="droitParagraph">Backward is b.</p>
-                    <p class="droitParagraph">Forward is f.</p>
-                    <p class="droitParagraph">Up is u.</p>
-                    <p class="droitParagraph">Down is d.</p>
-                    <br>
-                    <p class="droitParagraph">So now lets explain the different element of the frame data.</p>
-                    <br>
-                    <p class="droitParagraph">The hit level is if the move is high, mid or low.</p>
-                    <p class="droitParagraph">The damage is how much damage the attack does in hit.</p>
-                    <p class="droitParagraph">The start up frame is the speed of the move.</p>
-                    <p class="droitParagraph">The block frame is the advantage or disadvantage if the opponent block.</p>
-                    <p class="droitParagraph">The hit frame is the advantage or disadvantage if the oppenent get hit.</p>
-                    <p class="droitParagraph">The counter hit frame is the advantage or disadvantage if the oppenent get counter hit.</p>
-                    <p class="droitParagraph">The notes is if the move have special properties.</p>
-                    <br>
-                    <h3>Negative on block</h3>
-                    <p class="droitParagraph">If you do a move who is -10 on block, that mean that you can't do anyting during 10 frames. On this case, your opponent can do a jab to punish you, but imagine if you do a move who is -15, your opponent can start a combo on punish.</p>
-                    <br>
-                    <h3>Safe</h3>
-                    <p class="droitParagraph">If you do a move who is less than -10 frames on block or with enough pushback, you are safe, and can't be punish.</p>
-                    <br>
-                    <h3>Positive on block</h3>
-                    <p class="droitParagraph">If you do a move who is +5 on block mean that your opponent can't do a lot of thing, cause if he do something who take more than 5 frames, he can take a jab from you cause the jab is 10 frames fast, 10-5=-5, jab-advantage=not a good idea to move.</p>
-                    <br>
-                    <h3>Punish wiff</h3>
-                    <p class="droitParagraph">If your opponent whiff in case you duck is attack or he miss is attack, you can punish him with the appropriate move, in a lot of case, the recovery of the move is enough longer to launch him.</p>
-                    <br>
-                    <h3>Speed</h3>
-                    <p class="droitParagraph">The game is turning in 60fps, so if you do a jab, the impact will take 1/6 second to occur.</p>
-                    <br>
-                    <h3>Directional inputs</h3>
-                    <p class="droitParagraph">A sidestep is 6 frames, duck or standing is 1 frame, dashing and backdashing depend and your execution and the character.</p>
-                    <br>
                 </div>
+                <br>
+                <p class="droitParagraph">This basic move is a jab, a left punch, the command to do it is to use 1.</p>
+                <br>
+                <p class="droitParagraph">So left punch is 1, SQUARE on PS4, X on XBOX.</p>
+                <p class="droitParagraph">Right punch is 2, TRIANGLE on PS4, Y on XBOX.</p>
+                <p class="droitParagraph">Left kick is 3, CROSS on PS4, A on XBOX.</p>
+                <p class="droitParagraph">Right kick is 4, CIRCLE on PS4, B on XBOX.</p>
+                <br>
+                <div class='framedata_table'>
+                    <table class='table'>
+                        <tbody>
+                            <tr class='framedata_command'>
+                                <td class='framedata_properties' style="width: 50%;" rowspan="7">b+1</td>
+                                <td class='framedata_properties'>Hit level : h</td>
+                            </tr>
+                                <tr><td class='framedata_properties'>Damage : 17</td></tr>
+                                <tr><td class='framedata_properties'>Start up frame : 13~14</td></tr>
+                                <tr><td class='framedata_properties'>Block frame : -14~-13</td></tr>
+                                <tr><td class='framedata_properties'>Hit frame : +2~+3</td></tr>
+                                <tr><td class='framedata_properties'>Couter hit frame : CS</td></tr>
+                                <tr><td class='framedata_properties'>Notes : -</td></tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <p class="droitParagraph">This move need to press b and 1, b is a direction.</p>
+                <br>
+                <p class="droitParagraph">Backward is b.</p>
+                <p class="droitParagraph">Forward is f.</p>
+                <p class="droitParagraph">Up is u.</p>
+                <p class="droitParagraph">Down is d.</p>
+                <br>
+                <p class="droitParagraph">So now lets explain the different element of the frame data.</p>
+                <br>
+                <p class="droitParagraph">The hit level is if the move is high, mid or low.</p>
+                <p class="droitParagraph">The damage is how much damage the attack does in hit.</p>
+                <p class="droitParagraph">The start up frame is the speed of the move.</p>
+                <p class="droitParagraph">The block frame is the advantage or disadvantage if the opponent block.</p>
+                <p class="droitParagraph">The hit frame is the advantage or disadvantage if the oppenent get hit.</p>
+                <p class="droitParagraph">The counter hit frame is the advantage or disadvantage if the oppenent get counter hit.</p>
+                <p class="droitParagraph">The notes is if the move have special properties.</p>
+                <br>
+                <h3>Negative on block</h3>
+                <p class="droitParagraph">If you do a move who is -10 on block, that mean that you can't do anyting during 10 frames. On this case, your opponent can do a jab to punish you, but imagine if you do a move who is -15, your opponent can start a combo on punish.</p>
+                <br>
+                <h3>Safe</h3>
+                <p class="droitParagraph">If you do a move who is less than -10 frames on block or with enough pushback, you are safe, and can't be punish.</p>
+                <br>
+                <h3>Positive on block</h3>
+                <p class="droitParagraph">If you do a move who is +5 on block mean that your opponent can't do a lot of thing, cause if he do something who take more than 5 frames, he can take a jab from you cause the jab is 10 frames fast, 10-5=-5, jab-advantage=not a good idea to move.</p>
+                <br>
+                <h3>Punish wiff</h3>
+                <p class="droitParagraph">If your opponent whiff in case you duck is attack or he miss is attack, you can punish him with the appropriate move, in a lot of case, the recovery of the move is enough longer to launch him.</p>
+                <br>
+                <h3>Speed</h3>
+                <p class="droitParagraph">The game is turning in 60fps, so if you do a jab, the impact will take 1/6 second to occur.</p>
+                <br>
+                <h3>Directional inputs</h3>
+                <p class="droitParagraph">A sidestep is 6 frames, duck or standing is 1 frame, dashing and backdashing depend and your execution and the character.</p>
+                <br>
             </div>
         </div>
     </body>
