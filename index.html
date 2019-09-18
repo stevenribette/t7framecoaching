@@ -65,7 +65,7 @@
                 if ( app ) {
                     document.write("<div class=\"col-sm-12\"><br></div>");
                     document.write("<div class=\"col-sm-12\">");
-                    document.write("<button id=\"exitApp\" class=\"btn btn-block btnmenu tekkenfont\"><p>E X I T</p></button>");
+                    document.write("<button id=\"exitApp\" class=\"btn btn-block btnmenu tekkenfont\" onclick='exitApp()'><p>E X I T</p></button>");
                     document.write("</div>");
                 }
             </script>
@@ -76,15 +76,12 @@
     <script type="text/javascript" src="js/initdata.js"></script>
     <script type="text/javascript" charset="utf-8">
         playSound('sound/menu/welcome.mp3');
-        function onDeviceReady() {
-            document.getElementById('exitApp').addEventListener('click', function() {
-                if (navigator.app) {
-                    navigator.app.exitApp();
-                }
-                else if (navigator.device) {
-                    navigator.device.exitApp();
-                }
-            });
+        function exitApp(){
+            if(navigator.app){
+                navigator.app.exitApp();
+            }else if(navigator.device){
+                navigator.device.exitApp();
+            }
         }
         setTimeout(function () {
             evenement();
