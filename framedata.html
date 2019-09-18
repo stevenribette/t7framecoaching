@@ -51,6 +51,7 @@
         <script type="text/javascript" src="json/steve.js"></script>
         <script type="text/javascript" src="json/xiaoyu.js"></script>
         <script type="text/javascript" src="json/yoshimitsu.js"></script>
+        <script type="text/javascript" src="json/zafina.js"></script>
         <script type="text/javascript" src="js/frames.js"></script>
 
         <script type="text/javascript" src="js/script.js"></script>
@@ -68,16 +69,17 @@
     <body class="menubody" onload="init();">
         <div class="app container">
             <div class="col-sm-12" style="padding:0px;">
+                <script>
+                    var char = $_GET('character');
+                    var character_id = parseInt($_GET('character'));
+                    var character = characters[character_id];
+                    var frame = frames[character_id];
+                    var keys = Object.keys(frame[0]);
+                    var properties = "Command";
+                </script>
                 <div class="form-group" style="margin-top: 1%;margin-bottom: 1%;">
                     <select class="form-control" id="properties_select" onchange="selectProperties(this.value)">
-                        <script>            
-                            var char = $_GET('character');
-                            var character_id = parseInt($_GET('character'));
-                            var character = characters[character_id];
-                            var frame = frames[character_id];
-                            
-                            var keys = Object.keys(frame[0]);
-                            var properties = "Command";
+                        <script>
                             for(var x=0;x<keys.length;x++){
                                 document.write("<option>"+keys[x]+"</option>");
                             }

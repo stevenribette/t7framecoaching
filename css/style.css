@@ -153,7 +153,10 @@ button.btnmenu:active {
     width: 100%;
 }
 .persoDiv{
-    padding:10px;
+    padding:20px;
+    white-space:nowrap;
+    overflow-x:auto;
+    scrollbar-base-color:#ffeaff;
 }
 .persoSelection{
     padding:20px;
