@@ -1,4 +1,4 @@
-var kuma=[
+var kuma = [
     {
         "Command": "in rage b+1+2",
         "Hit level": "m",
@@ -2079,4 +2079,4 @@ var kuma=[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-];
+]

@@ -1,4 +1,4 @@
-var paul=[
+var paul = [
     {
         "Command": "in rage 1+2",
         "Hit level": "m",
@@ -941,12 +941,12 @@ var paul=[
     },
     {
         "Command": "qcb+3, 2, 3",
-        "Hit level": "l, m, l",
-        "Damage": "14,20,14",
+        "Hit level": "l, m, m",
+        "Damage": "14,20,22",
         "Start up frame": "18~19 (20~) 1~",
-        "Block frame": "-13~-12",
-        "Hit frame": "0~+1",
-        "Counter hit frame": "KND",
+        "Block frame": "-13",
+        "Hit frame": "KND",
+        "Counter hit frame": "Launch",
         "Notes": "-"
     },
     {
@@ -1509,4 +1509,4 @@ var paul=[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-];
+]

@@ -1,4 +1,4 @@
-var hwoarang=[
+var hwoarang = [
     {
         "Command": "in rage LFS or RFS d+3+4",
         "Hit level": "m",
@@ -2439,4 +2439,4 @@ var hwoarang=[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-];
+]

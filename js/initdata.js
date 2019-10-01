@@ -10,7 +10,7 @@ if(storage.getItem("coin")){
     document.write('</nav>');
 }
 if(storage.getItem("sound")){
-
+    
 }else{
     storage.setItem('sound',1);
 }

@@ -1,4 +1,4 @@
-var king=[
+var king = [
     {
         "Command": "in rage d/f+1+2",
         "Hit level": "m",
@@ -104,9 +104,9 @@ var king=[
         "Hit level": "h, m",
         "Damage": "10,15",
         "Start up frame": "10",
-        "Block frame": "-2~-1",
-        "Hit frame": "+5~+6",
-        "Counter hit frame": "+5~+6",
+        "Block frame": "-1",
+        "Hit frame": "+7",
+        "Counter hit frame": "+7",
         "Notes": "-"
     },
     {
@@ -127,7 +127,7 @@ var king=[
         "Block frame": "-13",
         "Hit frame": "KND",
         "Counter hit frame": "KND",
-        "Notes": "-"
+        "Notes": "Wall bounce"
     },
     {
         "Command": "1+2, 3",
@@ -600,6 +600,16 @@ var king=[
         "Notes": "-"
     },
     {
+        "Command": "b+2, 1",
+        "Hit level": "h, h",
+        "Damage": "14,20",
+        "Start up frame": "14",
+        "Block frame": "-9",
+        "Hit frame": "KND",
+        "Counter hit frame": "KND",
+        "Notes": "Tailspin"
+    },
+    {
         "Command": "b+2, 4",
         "Hit level": "h, m",
         "Damage": "12,18",
@@ -762,10 +772,10 @@ var king=[
     {
         "Command": "f, f, N, 2",
         "Hit level": "l (TC)",
-        "Damage": "14",
+        "Damage": "15",
         "Start up frame": "18(19~) cs6~",
-        "Block frame": "-15",
-        "Hit frame": "0s",
+        "Block frame": "-14",
+        "Hit frame": "+1",
         "Counter hit frame": "Throw(KND)",
         "Notes": "-"
     },
@@ -1929,4 +1939,4 @@ var king=[
         "Counter hit frame": "KND",
         "Notes": "-"
     }
-];
+]

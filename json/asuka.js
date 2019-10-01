@@ -1,4 +1,4 @@
-var asuka=[
+var asuka = [
     {
         "Command": "in rage d/f+1+2",
         "Hit level": "m",
@@ -1609,4 +1609,4 @@ var asuka=[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-];
+]

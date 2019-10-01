@@ -1,4 +1,4 @@
-var bryan=[
+var bryan = [
     {
         "Command": "in rage d/f+1+2 or FC+d/f+1+2",
         "Hit level": "m",
@@ -87,7 +87,7 @@ var bryan=[
         "Block frame": "-7",
         "Hit frame": "+4",
         "Counter hit frame": "CS",
-        "Notes": "Rage art, Rage art"
+        "Notes": "-"
     },
     {
         "Command": "1, 4, 2, 1",
@@ -97,7 +97,7 @@ var bryan=[
         "Block frame": "0",
         "Hit frame": "CS",
         "Counter hit frame": "CS",
-        "Notes": "Rage art, Rage art"
+        "Notes": "-"
     },
     {
         "Command": "1, 4, 2, 1, 2",
@@ -2029,4 +2029,4 @@ var bryan=[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-];
+]

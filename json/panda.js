@@ -1,4 +1,4 @@
-var panda=[
+var panda = [
     {
         "Command": "in rage b+1+2",
         "Hit level": "m",
@@ -2079,4 +2079,4 @@ var panda=[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-];
+]

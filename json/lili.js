@@ -1,4 +1,4 @@
-var lili=[
+var lili = [
     {
         "Command": "in rage 3+4",
         "Hit level": "m (TJ)",
@@ -1809,4 +1809,4 @@ var lili=[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-];
+]

@@ -1,4 +1,4 @@
-var marduk=[
+var marduk = [
     {
         "Command": "In rage b+1+2",
         "Hit level": "m (throw)",
@@ -212,21 +212,21 @@ var marduk=[
     {
         "Command": "f+3",
         "Hit level": "m",
-        "Damage": "17",
+        "Damage": "13",
         "Start up frame": "23",
         "Block frame": "-8",
         "Hit frame": "+5",
-        "Counter hit frame": "JG",
+        "Counter hit frame": "+5",
         "Notes": "-"
     },
     {
         "Command": "f+3, 2",
         "Hit level": "m, m",
-        "Damage": "17, 20",
+        "Damage": "13, 20",
         "Start up frame": "-",
-        "Block frame": "-9",
-        "Hit frame": "+6s",
-        "Counter hit frame": "JG",
+        "Block frame": "-11",
+        "Hit frame": "Launch",
+        "Counter hit frame": "Launch",
         "Notes": "-"
     },
     {
@@ -284,7 +284,7 @@ var marduk=[
         "Hit level": "m",
         "Damage": "15",
         "Start up frame": "15",
-        "Block frame": "-12",
+        "Block frame": "-13",
         "Hit frame": "JG",
         "Counter hit frame": "JG",
         "Notes": "-"
@@ -422,6 +422,26 @@ var marduk=[
     {
         "Command": "d/f+3, d/f+1, 2",
         "Hit level": "m, m, h",
+        "Damage": "13, 10, 20",
+        "Start up frame": "-",
+        "Block frame": "-6",
+        "Hit frame": "KND",
+        "Counter hit frame": "KND",
+        "Notes": "-"
+    },
+    {
+        "Command": "d/f+3, d/f+1, 2 (hold)",
+        "Hit level": "m, m, h",
+        "Damage": "13, 10, 28",
+        "Start up frame": "-",
+        "Block frame": "+13G (?)",
+        "Hit frame": "KND",
+        "Counter hit frame": "KND",
+        "Notes": "Tail spin"
+    },
+    {
+        "Command": "d/f+3, d/f+1, 2",
+        "Hit level": "m, m, h",
         "Damage": "13, 10, 21",
         "Start up frame": "-",
         "Block frame": "-3s",
@@ -511,7 +531,7 @@ var marduk=[
     },
     {
         "Command": "d+1+2",
-        "Hit level": "m (TC)",
+        "Hit level": "m ",
         "Damage": "22",
         "Start up frame": "19",
         "Block frame": "-12",
@@ -854,7 +874,7 @@ var marduk=[
         "Hit level": "m",
         "Damage": "26",
         "Start up frame": "18",
-        "Block frame": "-10",
+        "Block frame": "-8",
         "Hit frame": "KND",
         "Counter hit frame": "KND",
         "Notes": "Tail spin, Homing"
@@ -1006,7 +1026,7 @@ var marduk=[
         "Start up frame": "-",
         "Block frame": "-7",
         "Hit frame": "KND",
-        "Counter hit frame": "KND",
+        "Counter hit frame": "CS",
         "Notes": "-"
     },
     {
@@ -1262,6 +1282,16 @@ var marduk=[
     {
         "Command": "VTS f+1, 2",
         "Hit level": "m, m",
+        "Damage": "16, 20",
+        "Start up frame": "-",
+        "Block frame": "-13s",
+        "Hit frame": "+2s",
+        "Counter hit frame": "KND",
+        "Notes": "-"
+    },
+    {
+        "Command": "VTS f+1, 4",
+        "Hit level": "m, h",
         "Damage": "16, 26",
         "Start up frame": "-",
         "Block frame": "-10",
@@ -1299,4 +1329,4 @@ var marduk=[
         "Counter hit frame": "KND",
         "Notes": "-"
     }
-];
+]

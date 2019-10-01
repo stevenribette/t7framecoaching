@@ -25,7 +25,10 @@
                 </div>
                 <div class="persoDiv">
                     <script>
-                        //playSound('sound/menu/character_menu.mp3');
+                        function init(){
+                            playSound('sound/menu/character_menu.mp3');
+                            playTheme('sound/menu/character_select_theme.mp3');
+                        };
                         var mode = $_GET('mode');
                         var char = storage.getItem('favoritecharacter');
                         var char = parseInt(char);
@@ -42,6 +45,7 @@
                             if(char==x){
                                 confirm();
                             }else{
+                                playSound('sound/menu/character_select.mp3');
                                 $('#char_'+char).removeClass('characterselected');
                                 char = x;
                                 $('#characterselected').attr("src",'img/character/'+characters[x]+'.png');

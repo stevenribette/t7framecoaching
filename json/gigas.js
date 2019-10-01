@@ -1,4 +1,4 @@
-var gigas=[
+var gigas = [
     {
         "Command": "in rage 1+2",
         "Hit level": "m (TJ)",
@@ -54,9 +54,9 @@ var gigas=[
         "Hit level": "h, h",
         "Damage": "10,12",
         "Start up frame": "10",
-        "Block frame": "-7",
-        "Hit frame": "+4",
-        "Counter hit frame": "+4",
+        "Block frame": "-6",
+        "Hit frame": "+5",
+        "Counter hit frame": "+5",
         "Notes": "-"
     },
     {
@@ -264,7 +264,7 @@ var gigas=[
         "Hit level": "m",
         "Damage": "14",
         "Start up frame": "14",
-        "Block frame": "-9",
+        "Block frame": "-6",
         "Hit frame": "+4",
         "Counter hit frame": "+4",
         "Notes": "-"
@@ -434,10 +434,20 @@ var gigas=[
         "Hit level": "l (TC)",
         "Damage": "16",
         "Start up frame": "21s cs6~",
-        "Block frame": "-28",
-        "Hit frame": "+6",
-        "Counter hit frame": "+6",
+        "Block frame": "-20",
+        "Hit frame": "-4",
+        "Counter hit frame": "-4",
         "Notes": "-"
+    },
+    {
+        "Command": "d/b+3, 2",
+        "Hit level": "l, h (TC)",
+        "Damage": "16, 20",
+        "Start up frame": "21s cs6~",
+        "Block frame": "-9",
+        "Hit frame": "Tail spin",
+        "Counter hit frame": "Tail spin",
+        "Notes": "Tail spin"
     },
     {
         "Command": "d/b+4",
@@ -534,7 +544,7 @@ var gigas=[
         "Hit level": "m",
         "Damage": "30",
         "Start up frame": "25~26",
-        "Block frame": "+1~+2s",
+        "Block frame": "+4~+5s",
         "Hit frame": "+5~+6s",
         "Counter hit frame": "+5~+6s",
         "Notes": "-"
@@ -636,7 +646,7 @@ var gigas=[
         "Start up frame": "17(18~)",
         "Block frame": "-9",
         "Hit frame": "+3",
-        "Counter hit frame": "KND",
+        "Counter hit frame": "CS",
         "Notes": "-"
     },
     {
@@ -695,8 +705,8 @@ var gigas=[
         "Damage": "17",
         "Start up frame": "11~12",
         "Block frame": "-7~-6",
-        "Hit frame": "+3~+4",
-        "Counter hit frame": "+3~+4",
+        "Hit frame": "+5~+6",
+        "Counter hit frame": "+5~+6",
         "Notes": "-"
     },
     {
@@ -867,7 +877,7 @@ var gigas=[
         "Block frame": "KND",
         "Hit frame": "KND",
         "Counter hit frame": "KND",
-        "Notes": "-"
+        "Notes": "Wall bounce"
     },
     {
         "Command": "GOL 2 (After three step)",
@@ -1024,7 +1034,7 @@ var gigas=[
         "Hit level": "m",
         "Damage": "14",
         "Start up frame": "14",
-        "Block frame": "-9",
+        "Block frame": "-6",
         "Hit frame": "+4",
         "Counter hit frame": "+4",
         "Notes": "-"
@@ -1124,9 +1134,9 @@ var gigas=[
         "Hit level": "l (TC)",
         "Damage": "16",
         "Start up frame": "21s cs6~",
-        "Block frame": "-28",
-        "Hit frame": "+6",
-        "Counter hit frame": "+6",
+        "Block frame": "-20",
+        "Hit frame": "-4",
+        "Counter hit frame": "-4",
         "Notes": "-"
     },
     {
@@ -1285,8 +1295,8 @@ var gigas=[
         "Damage": "17",
         "Start up frame": "11~12",
         "Block frame": "-7~-6",
-        "Hit frame": "+3~+4",
-        "Counter hit frame": "+3~+4",
+        "Hit frame": "+4~+5",
+        "Counter hit frame": "+4~+5",
         "Notes": "-"
     },
     {
@@ -1439,4 +1449,4 @@ var gigas=[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-];
+]

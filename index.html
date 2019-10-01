@@ -49,6 +49,11 @@
 
             <div class="col-sm-12"><br></div>
             <div class="col-sm-12">
+                <button onClick='goTo("news.html")' class="btn btn-block btnmenu tekkenfont"><p>N E W S</p></button>
+            </div>
+
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12">
                 <button onClick='goTo("tutorial.html")' class="btn btn-block btnmenu tekkenfont"><p>T U T O R I A L</p></button>
             </div>
 
@@ -75,7 +80,9 @@
     </body>
     <script type="text/javascript" src="js/initdata.js"></script>
     <script type="text/javascript" charset="utf-8">
-        playSound('sound/menu/welcome.mp3');
+        function init(){
+            playSound('sound/menu/welcome.mp3');
+        };
         function exitApp(){
             if(navigator.app){
                 navigator.app.exitApp();
@@ -86,5 +93,8 @@
         setTimeout(function () {
             evenement();
         }, 1500);
+        setTimeout(function () {
+            screen.orientation.lock('portrait');
+        }, 100);
     </script>
 </html>

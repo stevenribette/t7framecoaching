@@ -7,7 +7,6 @@ var good_answer;
 var element;
 var affichage = false;
 function afficherContainer(str){
-    affichage = true;
     $('#containerPanneauResult').removeClass('fadeOutLeft');
     $('#panneauResult span').text(str);
     toggleDisplay('containerPanneauResult');
@@ -17,7 +16,6 @@ function effacerContainer(){
     setTimeout(function(){
         $('#panneauResult span').text('');
         toggleDisplay('containerPanneauResult');
-        affichage = false;
     },300);
 }
 function panneau_result(str,mode){
@@ -32,18 +30,23 @@ function training_answer(answer_id){
         return false;
     }
     addHit('traintotalhit');
+    affichage = true;
     if(frame[answer_id][element]==answers[good_answer].move[element]){
         addHit('trainsuccesshit');
         addCoin(1);
         //panneau_result("Good Answer",'training');
         $("#btn_"+answer_id).css("background-color", "green");
+        playSound('sound/menu/electric.mp3');
     }else{
         $("#btn_"+answer_id).css("background-color", "red");
         $("#btn_"+answers[good_answer].id).css("background-color", "green");
         //panneau_result('The answer was "'+answers[good_answer].move[ element ]+'"','training');
+        playSound('sound/menu/hit.mp3');
+        vibrate();
     }
     setTimeout(function () {
         shuffle('training');
+        affichage = false;
     }, 3000);
 }
 function training_shuffle(){

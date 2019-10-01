@@ -1,4 +1,4 @@
-var eliza=[
+var eliza = [
     {
         "Command": "in rage b+3+4",
         "Hit level": "m (TJ)",
@@ -1299,4 +1299,4 @@ var eliza=[
         "Counter hit frame": "KND",
         "Notes": "-"
     }
-];
+]

@@ -1,4 +1,4 @@
-var kazuya=[
+var kazuya = [
     {
         "Command": "in rage d/f+1+2",
         "Hit level": "m",
@@ -1077,7 +1077,7 @@ var kazuya=[
         "Block frame": "-3",
         "Hit frame": "+8",
         "Counter hit frame": "+8",
-        "Notes": "Rage art"
+        "Notes": "-"
     },
     {
         "Command": "3",
@@ -1549,4 +1549,4 @@ var kazuya=[
         "Counter hit frame": "+3",
         "Notes": "-"
     }
-];
+]
