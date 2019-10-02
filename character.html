@@ -58,7 +58,19 @@
                             document.location.href=mode+".html?character="+char;
                         }
                     </script>
+                </div>    
+                <div id="howtouseframedata">
+                    <div class="col-sm-12"><br></div>
+                    <div class="col-sm-12">
+                        <button onClick='goTo("howtouseframedata.html")' class="btn btn-block btnmenu"><p>HOW TO USE FRAME DATA?</p></button>
+                    </div>
                 </div>
+                <script>
+                    if(mode!='framedata'){
+                        toggleDisplay('howtouseframedata');
+                    }
+                    bottomNav();
+                </script>
             </div>
         </div>
     </body>

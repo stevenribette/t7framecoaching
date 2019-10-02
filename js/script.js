@@ -157,3 +157,6 @@ function getHit(target){
    hit = parseInt(hit);
    return hit;
 }
+function bottomNav(){
+   document.write('<nav class="navbar navbar-fixed-bottom" id="bottomBack"><a href=\"index.html\" class=\"btn btn-block btnmenu\"><p><span class=\"glyphicon glyphicon-chevron-left\"></span></p></a></nav>');
+}
