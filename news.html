@@ -52,22 +52,11 @@
         $('#ytCarousel').css('height', sH + 'px');
         $('#ytvideos .item').css('height', sH + 'px');
         channelName = "UCKHx_yf3dI2ajWAjXRJ_9Rw";
-        $(document).ready(function(){
-            $.get(
-                "https://www.googleapis.com/youtube/v3/channels",{
-                    part: "contentDetails",
-                    id: channelName,
-                    key: 'AIzaSyBwyvErm0FJk-z61q0LSoxDTTc-D6sTQ8Y'},
-                    function(data){
-                        $.each(data.items, function(i, item){
-                            pid = item.contentDetails.relatedPlaylists.uploads;
-                            getVids(pid);
-                        })
-                    }
-            );
-        });
+        getVids();
     }, 100);
-    function getVids(pid){
+
+    function getVids(){
+        pid = "PLC5oYYrGUiMMS84AQrxcP7eJQ8WOEdJOW";
         $.get(
             "https://www.googleapis.com/youtube/v3/playlistItems",{
                 part: 'snippet',

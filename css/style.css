@@ -219,3 +219,15 @@ button.btnmenu:active {
     text-align: left;
     background-color: rgba(0, 0, 0, 0.2);
 }
+.navbar{
+    margin-bottom: 0px ! important;
+}
+button.btnmenutop{
+    background-color: rgba(0, 0, 0, 0);
+}
+.framedata_spotlight{
+    border : 2px solid deepskyblue;
+    border-radius: 3px;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
