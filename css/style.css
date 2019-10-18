@@ -12,6 +12,14 @@ p{
     font-family: tekkenfont;
     src: url(../font/tarrgetacadital.ttf);
 }
+button{
+    border: none !important;
+    box-shadow: none !important;
+    outline: 0;
+}
+.white_title{
+    color:white;
+}
 body{
     background-repeat: no-repeat;
     background-attachment:fixed;

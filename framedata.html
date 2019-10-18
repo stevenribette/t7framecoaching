@@ -195,7 +195,11 @@
                 ret+="<div class='framedata_table'>";
                 for(var x=0;x<spotlight.length;x++){
                     var player = spotlight[x];
-                    ret+="<table class='table framedata_spotlight'><tbody><tr class='framedata_command'><td >"+player.Sponsor+" | "+player.Player+"</td></tr>";
+                    ret+="<table class='table framedata_spotlight'><tbody><tr class='framedata_command'><td >";
+                    if(player.Sponsor!=""){
+                        ret+=player.Sponsor+" | ";
+                    } 
+                    ret+=player.Player+"</td></tr>";
                     ret+="<tr class='framedata_command'><td >From "+player.Country+"</td></tr>";
                     ret+="<tr class='framedata_command'><td >Twitter : @"+player.Link+"</td></tr>";
                     ret+="<tr class='framedata_command'><td >"+player.Desc+"</td></tr></tbody></table>";
@@ -204,13 +208,27 @@
                 document.write(ret);
             </script>
         </div>
-        <div id="Keymoves" style="display: none">
+        <div id="Keymoves" style="display: none" class="container">
             <script>
                 var ret = "";
-                ret+="<div class='framedata_table'><h1>Punish moves</h1><table class='table framedata_keymove'><tbody>";
-                for(var x=0;x<keymove["Punish"].length;x++){
-                    var punish = keymove["Punish"][x];
-                    ret+="<tr class='framedata_command'><td >"+punish.frame+" frames : "+punish.command+"</td></tr>";
+                var punish_frames_min = 10;
+                var punish_frames_max = 16;
+                ret+="<h3 class='white_title'>Side to step : "+keymove["SideStep"]+"</h3>";
+                ret+="<h3 class='white_title'>Punish</h3><div class='panel-group' id='accordion'>";
+                for(var x=punish_frames_min;x<=punish_frames_max;x++){
+                    ret+="<div class='panel panel-default' onclick='toggleDisplay(\"collapse"+x+"\")'><div class='panel-heading'><h4 class='panel-title'>"+x+" Frames</h4></div></div><div id='collapse"+x+"' class='panel-collapse collapse in white_title' style='display:none'><table class='table framedata_spotlight'><tbody>";
+                    for(var y=0;y<frame.length;y++){
+                        if(frame[y]['Start up frame'].includes(x)){
+                            ret+="<tr class='framedata_command'><td>"+frame[y]['Command']+"</td></tr>";
+                        }
+                    }
+                    ret+="</tbody></table></div>";
+                }
+                ret+="</div>";
+                ret+="<div class='framedata_table'><h3>Combos</h3><table class='table framedata_keymove'><tbody>";
+                for(var x=0;x<keymove["Combos"].length;x++){
+                    var combo = keymove["Combos"][x];
+                    ret+="<tr class='framedata_command'><td>"+combo+"</td></tr>";
                 }
                 ret+="</tbody></table></div>";
                 document.write(ret);

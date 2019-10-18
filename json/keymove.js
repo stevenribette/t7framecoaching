@@ -2,150 +2,420 @@ var keymove = [
     {
         "Character" : "akuma",
         "Content" : {
+            "SideStep" : "Left",
             "Punish" : [
                 {
-                    "command" : "1",
+                    "command" : "1,2",
                     "frame" : "10"
+                },
+                {
+                    "command" : "1,1",
+                    "frame" : "10"
+                },
+                {
+                    "command" : "f,d,d/f+1",
+                    "frame" : "10"
+                },
+                {
+                    "command" : "qcb+3+4",
+                    "frame" : "10"
+                },
+                {
+                    "command" : "f,d,d/f+2",
+                    "frame" : "11"
+                },
+                {
+                    "command" : "d/f+3",
+                    "frame" : "12"
+                },
+                {
+                    "command" : "d/f+1",
+                    "frame" : "13"
+                },
+                {
+                    "command" : "f,d,d/f+1+2",
+                    "frame" : "13"
+                },
+                {
+                    "command" : "b+1",
+                    "frame" : "14"
+                },
+                {
+                    "command" : "qcb+4",
+                    "frame" : "15"
+                },
+                {
+                    "command" : "2",
+                    "frame" : "15"
+                },
+                {
+                    "command" : "d/f+2,1",
+                    "frame" : "16"
                 }
             ],
-            "Good moves" : [],
+            "Combos" : [
+                "d/f 2 1 , 3 , d/f 1 , 4 3 , dash , 2 , d d/f f 2"
+            ]
+        }
+    },
+    {
+        "Character" : "alisa",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
             "Combos" : []
         }
     },
     {
-        "Character" : "alisa"
+        "Character" : "anna",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "anna"
+        "Character" : "armor_king",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "armor_king"
+        "Character" : "asuka",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "asuka"
+        "Character" : "bob",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "bob"
+        "Character" : "bryan",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "bryan"
+        "Character" : "claudio",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "claudio"
+        "Character" : "devil_jin",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "devil_jin"
+        "Character" : "dragunov",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "dragunov"
+        "Character" : "eddy",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "eddy"
+        "Character" : "eliza",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "eliza"
-    }
-    ,
-    {
-        "Character" : "feng"        
+        "Character" : "feng",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }        
     },
     {
-        "Character" : "geese"
+        "Character" : "geese",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "gigas"
+        "Character" : "gigas",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "heihachi"
+        "Character" : "heihachi",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "hwoarang"
+        "Character" : "hwoarang",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "jack7"
+        "Character" : "jack7",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "jin"
+        "Character" : "jin",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "josie"
+        "Character" : "josie",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "julia"
+        "Character" : "julia",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "katarina"        
+        "Character" : "katarina",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "kazumi"
+        "Character" : "kazumi",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "kazuya"
+        "Character" : "kazuya",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "king"
+        "Character" : "king",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "kuma"        
+        "Character" : "kuma",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "lars"
+        "Character" : "lars",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "law"
+        "Character" : "law",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "lee"
+        "Character" : "lee",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "lei"
+        "Character" : "lei",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "leo"
+        "Character" : "leo",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "lili"        
+        "Character" : "lili",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "lucky_chloe"
+        "Character" : "lucky_chloe",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "marduk"        
+        "Character" : "marduk",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "master_raven"
+        "Character" : "master_raven",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "miguel"
+        "Character" : "miguel",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "negan"
+        "Character" : "negan",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "nina"        
+        "Character" : "nina",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "noctis"        
+        "Character" : "noctis",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "panda"
+        "Character" : "panda",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "paul"        
+        "Character" : "paul",
+        "Content" : {
+            "SideStep" : "Right",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "shaheen"
+        "Character" : "shaheen",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "steve"
+        "Character" : "steve",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "xiaoyu"
+        "Character" : "xiaoyu",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "yoshimitsu"
+        "Character" : "yoshimitsu",
+        "Content" : {
+            "SideStep" : "Left",
+            "Punish" : [],
+            "Combos" : []
+        }
     },
     {
-        "Character" : "zafina"
+        "Character" : "zafina",
+        "Content" : {
+            "SideStep" : "Don't know",
+            "Punish" : [],
+            "Combos" : []
+        }
     }
 ]

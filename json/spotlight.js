@@ -31,10 +31,28 @@ var spotlight = [
         ]        
     },
     {
-        "Character" : "anna"
+        "Character" : "anna",
+        "Content" : [
+            {
+                "Sponsor" : "",
+                "Player" : "200won",
+                "Country" : "Korea",
+                "Desc" : "200won. a former anna/mika player.",
+                "Link" : "uomooz"
+            }
+        ]
     },
     {
-        "Character" : "armor_king"
+        "Character" : "armor_king",
+        "Content" : [
+            {
+                "Sponsor" : "",
+                "Player" : "JDCR",
+                "Country" : "Korea",
+                "Desc" : "HyunJin Kim. http://instagram.com/tkjdcr <br>tkjdcr@gmail.com | YouTube: http://bit.ly/JDCR_YT",
+                "Link" : "TKJDCR"
+            }
+        ]
     },
     {
         "Character" : "asuka"
@@ -82,11 +100,11 @@ var spotlight = [
         "Character" : "dragunov",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "山佐株式会社様",
                 "Player" : "NOBI",
                 "Country" : "Japan",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "WCG2011優勝 evo2015優勝 鉄拳7世界大会THE KING OF IRON FIST TOURNAMENT 2015優勝 闘会議2018鉄拳7優勝 現在山佐株式会社様、イスカンダル五井金杉店様、株式会社ALETE様よりスポンサードを受けています。イベントやお仕事のお誘いはＤＭでお願いします！",
+                "Link" : "daichinobi"
             }
         ]
     },
@@ -100,8 +118,15 @@ var spotlight = [
                 "Sponsor" : "RIZE",
                 "Player" : "Eminor",
                 "Country" : "England",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "scrubby eliza player for @rizegamingpro and @g4r45u made my picture ok",
+                "Link" : "EMinorR"
+            },
+            {
+                "Sponsor" : "",
+                "Player" : "iLiink",
+                "Country" : "France",
+                "Desc" : "French Tekken 7 player / Eliza main / 20% Cooler Guy / Furry / Free Agent",
+                "Link" : "ii_Liink"
             }
         ]
     }
@@ -120,10 +145,10 @@ var spotlight = [
         "Content" : [
             {
                 "Sponsor" : "",
-                "Player" : "JDCR",
-                "Country" : "Korea",
-                "Desc" : "",
-                "Link" : ""
+                "Player" : "kuroten",
+                "Country" : "Japon",
+                "Desc" : "黒天と言うフランス人. 元BB勢: Izanami   T7:main:heihachi twitch : kuroten_jp <br>ヘッダー: @irosaburo <br>から！ <br>プロゲーマーを目指して海を超えた <br>{お仕事：dsdestroy@hotmail.frかDM}",
+                "Link" : "kurotenBB"
             }
         ]
     },
@@ -131,11 +156,11 @@ var spotlight = [
         "Character" : "hwoarang",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "Panda Global",
                 "Player" : "SpeedKicks",
                 "Country" : "USA",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "Professional Tekken 7 player for @PandaGlobal",
+                "Link" : "Speedkicks"
             }
         ]
     },
@@ -143,11 +168,11 @@ var spotlight = [
         "Character" : "jack7",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "Konix",
                 "Player" : "Gunni",
                 "Country" : "France",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "French Tekken player | JackHammer for life, aiming for best Jack in the world ! | Player for @KonixEsport",
+                "Link" : "Gunni_Tkn"
             }
         ]
     },
@@ -155,11 +180,11 @@ var spotlight = [
         "Character" : "jin",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "Illusion",
                 "Player" : "CBM",
                 "Country" : "Korea",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "Professional Tekken player for @illusionCGL. Partnered @Twitch Steamer.<br> Korean who can communicate in English.<br> Contact : wazzang37@gmail.com",
+                "Link" : "Tekken_CBM"
             }
         ]
     },
@@ -185,11 +210,11 @@ var spotlight = [
         "Character" : "kazumi",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "vSlash",
                 "Player" : "Arslan Ash",
                 "Country" : "Pakistan",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "Professional Tekken player for @VslashEsports. <br> Facebook: http://facebook.com/ArslanAsh95/ <br> Instagram: arslan.ash",
+                "Link" : "ArslanAsh95"
             }
         ]
     },
@@ -200,11 +225,11 @@ var spotlight = [
         "Character" : "king",
         "Content" : [
             {
-                "Sponsor" : "",
-                "Player" : "Lil Majin",
+                "Sponsor" : "HOTMESS",
+                "Player" : "Lil_Majin",
                 "Country" : "USA",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "Tekken Player| Sponsored by HOTMESS LLC.| Subscribe on YT: http://youtube.com/user/lilmajin <br> Want a T-shirt? Email: lilmajin87@gmail.com",
+                "Link" : "Lil_Majin"
             }
         ]
     },
@@ -239,11 +264,11 @@ var spotlight = [
         "Character" : "master_raven",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "CGG/QANBA",
                 "Player" : "Tissuemon",
-                "Country" : "Italia",
-                "Desc" : "",
-                "Link" : ""
+                "Country" : "Italy",
+                "Desc" : "Cyberground gaming(CGG)/QANBA/Tissuemon/ティッシュもん横とび 🇯🇵🇮🇹 living in Italy Milano currently.<br> https://Instagram.com/simon_kawai/",
+                "Link" : "tissuemon"
             }
         ]
     },
@@ -251,11 +276,11 @@ var spotlight = [
         "Character" : "miguel",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "BL",
                 "Player" : "Sephiblack",
-                "Country" : "Germany",
-                "Desc" : "",
-                "Link" : ""
+                "Country" : "Deutschland",
+                "Desc" : "Professional Tekken Player for @BlackLion_GG | Twitch Partner | Maincharacter Miguel | Our meeting here is destiny 👒",
+                "Link" : "Sephiblack_XI"
             }
         ]
     },
@@ -266,8 +291,8 @@ var spotlight = [
                 "Sponsor" : "",
                 "Player" : "Elix",
                 "Country" : "France",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "🇫🇷 Negan player",
+                "Link" : "_Elixou"
             }
         ]
     },
@@ -281,11 +306,11 @@ var spotlight = [
         "Character" : "panda",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "AMPLFY",
                 "Player" : "Rangchu",
                 "Country" : "Korea",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "Korean Professional Tekken Player sponsored by @getAMPLFYED @Trulytoptier supported by @victrixpro @goldenlever <br>Rangchu0617@gmail.com",
+                "Link" : "rangchu123"
             }
         ]
     },
@@ -299,11 +324,11 @@ var spotlight = [
         "Character" : "steve",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "DEUS",
                 "Player" : "Doug From Paris",
                 "Country" : "France",
-                "Desc" : "",
-                "Link" : ""
+                "Desc" : "Tekken Player for @DEUS_esport <br>Steve fox main <br>contact: douglas.chazal@gmail.com",
+                "Link" : "DougFromParis"
             }
         ]
     },
@@ -314,15 +339,18 @@ var spotlight = [
         "Character" : "yoshimitsu",
         "Content" : [
             {
-                "Sponsor" : "",
+                "Sponsor" : "Rox Dragon",
                 "Player" : "EyeMusician",
-                "Country" : "",
-                "Desc" : "",
-                "Link" : ""
+                "Country" : "Korea",
+                "Desc" : "ROX Dragons <br>TEKKEN - Yoshimitsu & Alisa player / http://twitch.tv/eyemusician1123",
+                "Link" : "alsgud1123"
             }
         ]
     },
     {
-        "Character" : "zafina"
+        "Character" : "zafina",
+        "Content" : [
+
+        ]
     }
 ]
